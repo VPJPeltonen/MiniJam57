@@ -6,6 +6,12 @@ var invisible = false
 func _ready():
 	pass # Replace with function body.
 
+func show_activetable():
+	$MeshInstance.get_surface_material(0).rim_enabled = true
+
+func hide_activetable():
+	$MeshInstance.get_surface_material(0).rim_enabled = false
+
 func player_activate():
 	if invisible:
 		$MeshInstance.show()
