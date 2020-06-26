@@ -5,8 +5,9 @@ export var acceleration = 5
 export var gravity = 0.98
 export var jump_power = 30
 export var mouse_sens = 0.3
-var velocity = Vector3()
 
+var velocity = Vector3()
+var item_in_range = null
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
@@ -22,6 +23,9 @@ func _input(event):
 		$Head/Camera.rotate_x(deg2rad(x_rot))
 
 func _physics_process(delta):
+	if Input.is_action_just_pressed("activate") and item_in_range != null:
+		item_in_range.player_activate()
+		
 	var head_basis = $Head.get_global_transform().basis
 	
 	var direction = Vector3()
@@ -44,3 +48,11 @@ func _physics_process(delta):
 		velocity.y += jump_power
 	
 	velocity = move_and_slide(velocity, Vector3.UP)
+
+func _on_Interract_Area_body_entered(body):
+	if body.has_method("player_activate"):
+		item_in_range = body
+
+func _on_Interract_Area_body_exited(body):
+	if item_in_range == body:
+		item_in_range = null
