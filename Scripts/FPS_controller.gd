@@ -27,7 +27,7 @@ func _input(event):
 			camera_x_rotation += x_delta
 			
 func _physics_process(delta):
-	if Input.is_action_just_pressed("activate") and items_in_range.empty():
+	if Input.is_action_just_pressed("activate") and !items_in_range.empty():
 		items_in_range[0].player_activate()
 	
 	if Input.is_action_pressed("analyze") and !items_in_range.empty():
