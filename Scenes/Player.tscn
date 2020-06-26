@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scripts/FPS_controller.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Analyzer.gd" type="Script" id=2]
 
 [sub_resource type="CapsuleShape" id=1]
 
@@ -26,5 +27,41 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0191021, 0.038868, -1.44095 
 [node name="CollisionShape" type="CollisionShape" parent="Head/Interract_Area"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.19481e-05, -0.0254998, -0.0207138 )
 shape = SubResource( 2 )
+
+[node name="Analyzer" type="Node2D" parent="."]
+script = ExtResource( 2 )
+
+[node name="InfoBox" type="ColorRect" parent="Analyzer"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 593.081
+margin_top = 195.052
+margin_right = 876.081
+margin_bottom = 330.052
+color = Color( 1, 1, 1, 0.588235 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Analyzer/InfoBox"]
+margin_left = 3.5849
+margin_top = 3.94334
+margin_right = 277.585
+margin_bottom = 130.943
+color = Color( 0.305882, 0.427451, 0.843137, 0.588235 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Analyzer/InfoBox/ColorRect"]
+margin_top = 1.0
+margin_right = 273.0
+margin_bottom = 128.0
+text = "Random Info Here"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="body_entered" from="Head/Interract_Area" to="." method="_on_Interract_Area_body_entered"]
 [connection signal="body_exited" from="Head/Interract_Area" to="." method="_on_Interract_Area_body_exited"]

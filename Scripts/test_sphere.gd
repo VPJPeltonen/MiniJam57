@@ -1,7 +1,7 @@
 extends StaticBody
 
 var invisible = false
-var info = "This appears to be a cube"
+var info = "This appears to be a sphere"
 
 func show_activetable():
 	$MeshInstance/Outline.show()

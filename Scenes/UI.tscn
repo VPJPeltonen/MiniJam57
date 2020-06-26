@@ -1,0 +1,36 @@
+[gd_scene format=2]
+
+[node name="UI" type="Node2D"]
+
+[node name="InfoBox" type="ColorRect" parent="."]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 593.081
+margin_top = 195.052
+margin_right = 876.081
+margin_bottom = 330.052
+color = Color( 1, 1, 1, 0.588235 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="InfoBox"]
+margin_left = 3.5849
+margin_top = 3.94334
+margin_right = 277.585
+margin_bottom = 130.943
+color = Color( 0.305882, 0.427451, 0.843137, 0.588235 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="InfoBox/ColorRect"]
+margin_top = 1.0
+margin_right = 273.0
+margin_bottom = 128.0
+text = "Random Info Here"
+__meta__ = {
+"_edit_use_anchors_": false
+}

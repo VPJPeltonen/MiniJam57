@@ -20,11 +20,7 @@ func _input(event):
 		#sideways rotation
 		$Head.rotate_y(deg2rad(-event.relative.x * mouse_sens))
 		
-		#up down rotationt, clamped so you cant look too up or down
-		#var x_rot = -event.relative.y * mouse_sens
-		#x_rot = clamp(x_rot,-90,90)
-		#$Head/Camera.rotate_x(deg2rad(x_rot))
-
+		#up down rotation
 		var x_delta = event.relative.y * mouse_sens
 		if camera_x_rotation + x_delta > -90 and camera_x_rotation + x_delta < 90: 
 			$Head/Camera.rotate_x(deg2rad(-x_delta))
@@ -33,7 +29,12 @@ func _input(event):
 func _physics_process(delta):
 	if Input.is_action_just_pressed("activate") and item_in_range != null:
 		item_in_range.player_activate()
-		
+	
+	if Input.is_action_pressed("analyze"):
+		$Analyzer.show_info(item_in_range)
+	else:
+		$Analyzer.hide()
+	
 	var head_basis = $Head.get_global_transform().basis
 	
 	var direction = Vector3()
@@ -58,7 +59,7 @@ func _physics_process(delta):
 	velocity = move_and_slide(velocity, Vector3.UP)
 
 func _on_Interract_Area_body_entered(body):
-	if body.has_method("player_activate"):
+	if body.has_method("player_activate") and item_in_range == null:
 		item_in_range = body
 		body.show_activetable()
 		
