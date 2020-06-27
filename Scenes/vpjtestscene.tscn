@@ -85,7 +85,7 @@ script = ExtResource( 2 )
 shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="RigidBody2"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0210223, -2.38419e-07, 0.00719762 )
+transform = Transform( 0.999985, 0, 0.00539304, 0, 1, 0, -0.00539304, 0, 0.999985, 3.91773, -0.771713, -1.57183 )
 mesh = SubResource( 2 )
 material/0 = SubResource( 3 )
 
