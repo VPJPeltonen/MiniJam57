@@ -10,13 +10,21 @@ var velocity = Vector3()
 var camera_x_rotation = 0
 
 var items_in_range = []
+var mouse_captured: bool
 
 func _ready():
-	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+
+func _capture_mouse():
+	mouse_captured = true
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
+func _free_mouse():
+	mouse_captured = false
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+
 func _input(event):
-	if event is InputEventMouseMotion:
+	if event is InputEventMouseMotion and mouse_captured:
 		#sideways rotation
 		$Head.rotate_y(deg2rad(-event.relative.x * mouse_sens))
 		
@@ -25,7 +33,13 @@ func _input(event):
 		if camera_x_rotation + x_delta > -90 and camera_x_rotation + x_delta < 90: 
 			$Head/Camera.rotate_x(deg2rad(-x_delta))
 			camera_x_rotation += x_delta
-			
+	elif event is InputEventMouseButton:
+		# TODO: Move other mouse events here too?
+		_capture_mouse()
+
+	if mouse_captured and Input.is_action_just_pressed("ui_cancel"):
+		_free_mouse()
+
 func _physics_process(delta):
 	if Input.is_action_just_pressed("activate") and !items_in_range.empty():
 		items_in_range[0].player_activate()
