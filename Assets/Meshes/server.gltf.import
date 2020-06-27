@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/room.glb-c1fad131eba248b6ffa2271020229ec1.scn"
+path="res://.import/server.gltf-af0f6b31a4cd0cfc43d9274d9ff8ce45.scn"
 
 [deps]
 
-source_file="res://Assets/Meshes/room.glb"
-dest_files=[ "res://.import/room.glb-c1fad131eba248b6ffa2271020229ec1.scn" ]
+source_file="res://Assets/Meshes/server.gltf"
+dest_files=[ "res://.import/server.gltf-af0f6b31a4cd0cfc43d9274d9ff8ce45.scn" ]
 
 [params]
 
@@ -24,6 +24,7 @@ meshes/ensure_tangents=true
 meshes/storage=0
 meshes/light_baking=0
 meshes/lightmap_texel_size=0.1
+skins/use_named_skins=true
 external_files/store_in_subdir=false
 animation/import=true
 animation/fps=15
