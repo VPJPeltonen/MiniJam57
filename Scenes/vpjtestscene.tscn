@@ -1,7 +1,14 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=16 format=2]
 
-[ext_resource path="res://Scenes/time-1.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/server.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/table.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/computer.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/server2.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/VaultDoor.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Keys.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scripts/Keys.gd" type="Script" id=8]
+[ext_resource path="res://Scenes/offceChair.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Assets/Meshes/room.tscn" type="PackedScene" id=10]
 
 [sub_resource type="BakedLightmapData" id=1]
@@ -10,10 +17,25 @@ cell_space_transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 147.589, 40, 131.38
 cell_subdiv = 10
 octree = PoolByteArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255 )
 
+[sub_resource type="CubeMesh" id=2]
+
+[sub_resource type="SpatialMaterial" id=3]
+albedo_color = Color( 0.85098, 1, 0, 1 )
+emission_enabled = true
+emission = Color( 0.87451, 1, 0, 1 )
+emission_energy = 1.0
+emission_operator = 0
+emission_on_uv2 = false
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 0.46025, 12.0904, 6.60989 )
+
+[sub_resource type="CubeMesh" id=5]
+
 [node name="Spatial" type="Spatial"]
 
 [node name="Player" parent="." instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.1906, 2.50677, 15.0672 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.1906, 6.71961, 21.1649 )
 speed = 5
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
@@ -29,6 +51,129 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16.9817, 10.3642, 1.40347 )
 omni_range = 19.943
 
 [node name="room" parent="." instance=ExtResource( 10 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.51975, -0.0498986, 1.40347 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.56808, 3.92531, 3.56109 )
 
-[node name="time-1" parent="room" instance=ExtResource( 1 )]
+[node name="time-1" type="Spatial" parent="room"]
+
+[node name="table" parent="room/time-1" instance=ExtResource( 2 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -2.51975, 0.276034, 5.69286 )
+
+[node name="computer" parent="room/time-1/table" instance=ExtResource( 3 )]
+transform = Transform( -0.0914151, 0, 0.744408, 0, 0.75, 0, -0.744408, 0, -0.0914151, 0, 2.97911, 0.498435 )
+info = "Ancient data processing unit. There is a a cellulose fibre sheet with numbers 1234"
+has_item = true
+item_held = "door code"
+
+[node name="MeshInstance" type="MeshInstance" parent="room/time-1/table"]
+transform = Transform( 0.247953, -0.0501709, 0.00958288, 0.0760361, 0.233676, 0.00047143, -0.119583, 0.0197825, 0.0483495, 0.289177, 3.60098, 1.12823 )
+mesh = SubResource( 2 )
+material/0 = SubResource( 3 )
+
+[node name="table2" parent="room/time-1" instance=ExtResource( 2 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -7.8472, 0.276034, 5.69286 )
+
+[node name="computer" parent="room/time-1/table2" instance=ExtResource( 3 )]
+transform = Transform( 0.0115318, 0, 0.749911, 0, 0.75, 0, -0.749911, 0, 0.0115318, 0, 3.00591, 0.564821 )
+
+[node name="Servers" type="Spatial" parent="room/time-1"]
+
+[node name="server2" parent="room/time-1/Servers" instance=ExtResource( 1 )]
+transform = Transform( -0.00734763, 0, -0.499946, 0, 0.5, 0, 0.499946, 0, -0.00734763, -18.3032, 1.694, 10.1147 )
+
+[node name="server6" parent="room/time-1/Servers" instance=ExtResource( 1 )]
+transform = Transform( -0.00734763, 0, -0.499946, 0, 0.5, 0, 0.499946, 0, -0.00734763, -16.0912, 1.694, 10.1139 )
+
+[node name="server7" parent="room/time-1/Servers" instance=ExtResource( 1 )]
+transform = Transform( -0.00734763, 0, -0.499946, 0, 0.5, 0, 0.499946, 0, -0.00734763, -24.3457, 1.694, 10.1086 )
+
+[node name="server8" parent="room/time-1/Servers" instance=ExtResource( 1 )]
+transform = Transform( -0.00734763, 0, -0.499946, 0, 0.5, 0, 0.499946, 0, -0.00734763, -26.4311, 1.694, 10.1086 )
+
+[node name="server9" parent="room/time-1/Servers" instance=ExtResource( 1 )]
+transform = Transform( -0.00734763, 0, -0.499946, 0, 0.5, 0, 0.499946, 0, -0.00734763, -28.5557, 1.694, 10.1086 )
+
+[node name="server4" parent="room/time-1/Servers" instance=ExtResource( 1 )]
+transform = Transform( -0.00734763, 0, -0.499946, 0, 0.5, 0, 0.499946, 0, -0.00734763, -13.9684, 1.694, 10.1086 )
+
+[node name="server5" parent="room/time-1/Servers" instance=ExtResource( 1 )]
+transform = Transform( -0.00734763, 0, -0.499946, 0, 0.5, 0, 0.499946, 0, -0.00734763, -10.121, 1.694, 10.1086 )
+
+[node name="server3" parent="room/time-1/Servers" instance=ExtResource( 4 )]
+transform = Transform( -0.0271702, 0, -0.499261, 0, 0.5, 0, 0.499261, 0, -0.0271702, -20.5146, 0.623098, 10.0933 )
+move_location = Vector3( 0, 0, -3 )
+
+[node name="server13" parent="room/time-1/Servers" instance=ExtResource( 1 )]
+transform = Transform( 0.0104102, 0, 0.499892, 0, 0.5, 0, -0.499892, 0, 0.0104102, -20.8012, 1.694, -10.7598 )
+
+[node name="server14" parent="room/time-1/Servers" instance=ExtResource( 1 )]
+transform = Transform( 0.0104102, 0, 0.499892, 0, 0.5, 0, -0.499892, 0, 0.0104102, -18.402, 1.694, -10.7451 )
+
+[node name="server15" parent="room/time-1/Servers" instance=ExtResource( 1 )]
+transform = Transform( 0.0104102, 0, 0.499892, 0, 0.5, 0, -0.499892, 0, 0.0104102, -16.245, 1.694, -10.7319 )
+
+[node name="server16" parent="room/time-1/Servers" instance=ExtResource( 1 )]
+transform = Transform( 0.0104102, 0, 0.499892, 0, 0.5, 0, -0.499892, 0, 0.0104102, -14.133, 1.694, -10.719 )
+
+[node name="server18" parent="room/time-1/Servers" instance=ExtResource( 1 )]
+transform = Transform( 0.0104102, 0, 0.499892, 0, 0.5, 0, -0.499892, 0, 0.0104102, -10.1818, 1.694, -10.6223 )
+
+[node name="server19" parent="room/time-1/Servers" instance=ExtResource( 4 )]
+transform = Transform( 0.0302282, 0, 0.499085, 0, 0.5, 0, -0.499085, 0, 0.0302282, -24.6323, 0.623098, -10.768 )
+move_location = Vector3( 0, 0, -3 )
+
+[node name="Vault" type="Spatial" parent="room/time-1"]
+
+[node name="StaticBody2" type="StaticBody" parent="room/time-1/Vault"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -29.8574, 0, -15.5406 )
+
+[node name="CollisionShape" type="CollisionShape" parent="room/time-1/Vault/StaticBody2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.501291, 2.10544, 7.63214 )
+shape = SubResource( 4 )
+
+[node name="MeshInstance" type="MeshInstance" parent="room/time-1/Vault/StaticBody2"]
+transform = Transform( 0.504652, 0, 0, 0, 13.183, 0, 0, 0, 6.58256, -0.506355, 0.972985, 7.63252 )
+mesh = SubResource( 5 )
+material/0 = null
+
+[node name="StaticBody3" type="StaticBody" parent="room/time-1/Vault"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -29.8574, 0, 0.259752 )
+
+[node name="CollisionShape" type="CollisionShape" parent="room/time-1/Vault/StaticBody3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.501291, 2.10544, 7.63214 )
+shape = SubResource( 4 )
+
+[node name="MeshInstance" type="MeshInstance" parent="room/time-1/Vault/StaticBody3"]
+transform = Transform( 0.504652, 0, 0, 0, 13.183, 0, 0, 0, 6.58256, -0.506355, 0.972985, 7.63252 )
+mesh = SubResource( 5 )
+material/0 = null
+
+[node name="StaticBody4" type="StaticBody" parent="room/time-1/Vault"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -29.8574, 7.52382, 0.259752 )
+
+[node name="CollisionShape" type="CollisionShape" parent="room/time-1/Vault/StaticBody4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.501291, 2.10544, 7.63214 )
+shape = SubResource( 4 )
+
+[node name="MeshInstance" type="MeshInstance" parent="room/time-1/Vault/StaticBody4"]
+transform = Transform( 0.530176, 0, 0, 0, 13.8498, 0, 0, 0, 1.3393, -0.506355, 11.1873, -0.296735 )
+mesh = SubResource( 5 )
+material/0 = null
+
+[node name="VaultDoor" parent="room/time-1/Vault" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -29.4984, 1.01153, 0.352564 )
+move_location = Vector3( 0, 5, 0 )
+
+[node name="Keys" parent="room/time-1/Vault/VaultDoor" instance=ExtResource( 7 )]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.589014, 0.637502, -1.07074 )
+script = ExtResource( 8 )
+info = "This ancient device requires some kind of code"
+
+[node name="Chairs" type="Spatial" parent="room/time-1"]
+
+[node name="offceChair" parent="room/time-1/Chairs" instance=ExtResource( 9 )]
+transform = Transform( -0.33474, 0, 0.371415, 0, 0.5, 0, -0.371415, 0, -0.33474, -2.87922, 0.089469, 3.40972 )
+move_location = Vector3( 2, 0, 0 )
+
+[node name="offceChair2" parent="room/time-1/Chairs" instance=ExtResource( 9 )]
+transform = Transform( -0.498506, 0, -0.0386207, 0, 0.5, 0, 0.0386207, 0, -0.498506, -7.18592, 0.089469, 3.40972 )
+move_location = Vector3( 1, 0, 1 )
