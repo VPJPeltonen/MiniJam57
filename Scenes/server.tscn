@@ -37,9 +37,6 @@ surfaces/0 = {
 [sub_resource type="SpatialMaterial" id=4]
 albedo_texture = ExtResource( 2 )
 
-[sub_resource type="BoxShape" id=5]
-extents = Vector3( 1, 3.29972, 2.12883 )
-
 [sub_resource type="ArrayMesh" id=2]
 surfaces/0 = {
 "aabb": AABB( -1.14552, -1.02887, -1.02887, 2.17439, 6.11611, 4.10908 ),
@@ -60,9 +57,13 @@ emission_energy = 1.0
 emission_operator = 0
 emission_on_uv2 = false
 
+[sub_resource type="BoxShape" id=5]
+extents = Vector3( 1, 3.29972, 2.12883 )
+
 [node name="server" type="StaticBody"]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 1.40633, 0 )
 script = ExtResource( 4 )
+info = "This seems to be ancient data storage device"
 
 [node name="StaticBody" type="StaticBody" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.55272, 0 )
@@ -74,15 +75,21 @@ mesh = SubResource( 1 )
 material/0 = null
 
 [node name="Cube2" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.34032, -1.00211 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.3, -1.002 )
+use_in_baked_light = true
 mesh = SubResource( 6 )
 material/0 = SubResource( 4 )
+
+[node name="Outline" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.3, -1 )
+mesh = SubResource( 2 )
+material/0 = SubResource( 3 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0744543, 0 )
 shape = SubResource( 5 )
 
-[node name="Outline" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.27674, -0.9759 )
-mesh = SubResource( 2 )
-material/0 = SubResource( 3 )
+[node name="OmniLight" type="OmniLight" parent="."]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -1.1923, 0, 0.999313 )
+light_color = Color( 0.113725, 0.301961, 0.541176, 1 )
+omni_range = 1.0

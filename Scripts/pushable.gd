@@ -6,8 +6,17 @@ var original_location
 var second_location
 var current_target
 var moving = false
+var outline_mesh
 
 func _ready():
+	var path := "MeshInstance/Outline"
+	var path2 := "Outline"
+	if has_node(path):
+		outline_mesh = get_node(path)
+	elif has_node(path2):
+		outline_mesh = get_node(path2)
+	else:
+		push_error("Could not find Outline Mesh for %s" % name)
 	original_location = translation
 	second_location = translation + move_location
 
@@ -19,10 +28,10 @@ func _process(delta):
 
 
 func show_activetable():
-	$MeshInstance/Outline.show()
+	outline_mesh.show()
 
 func hide_activetable():
-	$MeshInstance/Outline.hide()
+	outline_mesh.hide()
 
 func player_activate():
 	if !moving:

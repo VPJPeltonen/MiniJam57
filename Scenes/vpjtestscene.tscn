@@ -1,10 +1,11 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scripts/test_stuff/test_cube.gd" type="Script" id=2]
 [ext_resource path="res://Scripts/test_stuff/test_sphere.gd" type="Script" id=3]
 [ext_resource path="res://Scenes/pushable_test.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/server.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/server2.tscn" type="PackedScene" id=6]
 
 [sub_resource type="BoxShape" id=1]
 
@@ -64,6 +65,12 @@ emission = Color( 1, 1, 1, 1 )
 emission_energy = 1.0
 emission_operator = 0
 emission_on_uv2 = false
+
+[sub_resource type="BakedLightmapData" id=11]
+bounds = AABB( -10, -10, -10, 20, 20, 20 )
+cell_space_transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 40, 40, 40 )
+cell_subdiv = 8
+octree = PoolByteArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255 )
 
 [node name="Spatial" type="Spatial"]
 
@@ -138,7 +145,15 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.34982, 2.50677, 0 )
 speed = 5
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.18205, 0 )
+transform = Transform( 1, 0, 0, 0, 0.915726, 0.401804, 0, -0.401804, 0.915726, 0, 13.1466, 9.25408 )
+
+[node name="BakedLightmap" type="BakedLightmap" parent="."]
+transform = Transform( 0.995639, 0, -0.0932916, 0, 1, 0, 0.0932916, 0, 0.995639, 0, 2.86976, -0.523895 )
+light_data = SubResource( 11 )
 
 [node name="server2" parent="." instance=ExtResource( 5 )]
 transform = Transform( 0.497819, 0, -0.0466458, 0, 0.5, 0, 0.0466458, 0, 0.497819, 0, 2.86976, 3.33989 )
+
+[node name="server3" parent="." instance=ExtResource( 6 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -2.43699, 2.26148, 0 )
+move_location = Vector3( 0, 2, 0 )
