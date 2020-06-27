@@ -16,7 +16,6 @@ _global_script_class_icons={
 [application]
 
 config/name="Minijam56"
-run/main_scene="res://Scenes/WorldTest.tscn"
 config/icon="res://icon.png"
 
 [display]
@@ -96,4 +95,3 @@ vram_compression/import_etc=true
 vram_compression/import_etc2=false
 quality/filters/msaa=1
 environment/default_environment="res://default_env.tres"
-quality/dynamic_fonts/use_oversampling=false

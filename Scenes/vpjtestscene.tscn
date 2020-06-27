@@ -141,4 +141,4 @@ speed = 5
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.18205, 0 )
 
 [node name="server2" parent="." instance=ExtResource( 5 )]
-transform = Transform( 0.497819, 0, -0.0466458, 0, 0.5, 0, 0.0466458, 0, 0.497819, 0, 0.94626, 3.33989 )
+transform = Transform( 0.497819, 0, -0.0466458, 0, 0.5, 0, 0.0466458, 0, 0.497819, 0, 2.86976, 3.33989 )
