@@ -10,6 +10,7 @@ var velocity = Vector3()
 var camera_x_rotation = 0
 
 var items_in_range = []
+var inventory = []
 var mouse_captured: bool
 
 func _ready():
@@ -42,10 +43,12 @@ func _input(event):
 
 func _physics_process(delta):
 	if Input.is_action_just_pressed("activate") and !items_in_range.empty():
-		items_in_range[0].player_activate()
+		items_in_range[0].player_activate(self)
 	
 	if Input.is_action_pressed("analyze") and !items_in_range.empty():
 		$Analyzer.show_info(items_in_range[0])
+		if items_in_range[0].has_item:
+			add_item(items_in_range[0].item_held)
 	else:
 		$Analyzer.hide()
 	
@@ -71,6 +74,12 @@ func _physics_process(delta):
 		velocity.y += jump_power
 	
 	velocity = move_and_slide(velocity, Vector3.UP)
+
+func add_item(item):
+	if inventory.has(item):
+		return
+	else:
+		inventory.append(item)
 
 func _on_Interract_Area_body_entered(body):
 	if body.has_method("player_activate") and !items_in_range.has(body):

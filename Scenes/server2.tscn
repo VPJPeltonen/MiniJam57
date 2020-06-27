@@ -5,6 +5,8 @@
 [ext_resource path="res://Scripts/pushable.gd" type="Script" id=3]
 [ext_resource path="res://Assets/outline_ material.tres" type="Material" id=4]
 
+
+
 [sub_resource type="ArrayMesh" id=1]
 resource_name = "Cube"
 surfaces/0 = {
@@ -38,6 +40,7 @@ surfaces/0 = {
 
 [node name="server2" type="StaticBody"]
 script = ExtResource( 3 )
+info = "Ancient data storage device. This appaers to be pushable"
 
 [node name="Cube" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.104411, 0.102084, -1.00709 )

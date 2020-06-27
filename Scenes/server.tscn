@@ -39,6 +39,7 @@ surfaces/0 = {
 [node name="server" type="StaticBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.9122, 0 )
 script = ExtResource( 4 )
+info = "Ancient data storage device"
 
 [node name="Cube" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.104411, -2.00275, -1.00709 )

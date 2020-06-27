@@ -25,4 +25,5 @@ func hide_activetable():
 	outline_mesh.hide()
 
 func player_activate(player):
-	pass
+	if player.inventory.has("door code"):
+		get_parent().start_moving()

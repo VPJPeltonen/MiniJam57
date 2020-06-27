@@ -1,14 +1,12 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scenes/time-1.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Scenes/table.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Scenes/computer.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Assets/Meshes/room.tscn" type="PackedScene" id=10]
 
 [sub_resource type="BakedLightmapData" id=1]
-bounds = AABB( -36.8973, -10, -32.8471, 73.7946, 20, 65.6943 )
-cell_space_transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 147.589, 40, 131.389 )
+bounds = AABB( -36.8973, -10, -32.8471, 73.7946, 20, 65.6942 )
+cell_space_transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 147.589, 40, 131.388 )
 cell_subdiv = 10
 octree = PoolByteArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255 )
 
@@ -26,17 +24,9 @@ transform = Transform( 0.995639, 0, -0.0932916, 0, 1, 0, 0.0932916, 0, 0.995639,
 bake_extents = Vector3( 36.8973, 10, 32.8471 )
 light_data = SubResource( 1 )
 
-[node name="table" parent="." instance=ExtResource( 2 )]
-transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.226135, 7.09633 )
-
-[node name="computer" parent="table" instance=ExtResource( 3 )]
-transform = Transform( 0.0161763, 0, 0.499738, -0.0350079, 0.498772, 0.00113319, -0.498511, -0.0350262, 0.0161366, 0.817056, 1.83924, 0.427459 )
-
-[node name="table2" parent="." instance=ExtResource( 2 )]
-transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -5.32745, 0.226135, 7.09633 )
-
-[node name="computer" parent="table2" instance=ExtResource( 3 )]
-transform = Transform( 0.0161763, 0, 0.499738, -0.0350079, 0.498772, 0.00113319, -0.498511, -0.0350262, 0.0161366, 0.817056, 1.83924, 0.427459 )
+[node name="OmniLight" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16.9817, 10.3642, 1.40347 )
+omni_range = 19.943
 
 [node name="room" parent="." instance=ExtResource( 10 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.51975, -0.0498986, 1.40347 )
