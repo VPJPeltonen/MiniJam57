@@ -1,6 +1,17 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Assets/Meshes/computer.glb" type="PackedScene" id=1]
+[ext_resource path="res://Assets/Meshes/palette_material.tres" type="Material" id=2]
 
 [node name="computer" instance=ExtResource( 1 )]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0 )
+
+[node name="Monitor" parent="." index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.134083, 1.73237, 0.0289164 )
+material/0 = ExtResource( 2 )
+
+[node name="Mouse" parent="." index="3"]
+material/0 = ExtResource( 2 )
+
+[node name="Keyboard" parent="." index="4"]
+material/0 = ExtResource( 2 )

@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/server2.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/server.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scripts/pushable.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/info_object.gd" type="Script" id=4]
+
+[node name="time-1" type="Spatial"]
+
+[node name="server2" type="StaticBody" parent="." instance=ExtResource( 2 )]
+transform = Transform( -0.00734763, 0, -0.499946, 0, 0.5, 0, 0.499946, 0, -0.00734763, -18.3036, 1.694, 10.1086 )
+script = ExtResource( 4 )
+
+[node name="server6" type="StaticBody" parent="." instance=ExtResource( 2 )]
+transform = Transform( -0.00734763, 0, -0.499946, 0, 0.5, 0, 0.499946, 0, -0.00734763, -16.0912, 1.694, 10.1139 )
+script = ExtResource( 4 )
+
+[node name="server7" type="StaticBody" parent="." instance=ExtResource( 2 )]
+transform = Transform( -0.00734763, 0, -0.499946, 0, 0.5, 0, 0.499946, 0, -0.00734763, -24.3457, 1.694, 10.1086 )
+script = ExtResource( 4 )
+
+[node name="server8" type="StaticBody" parent="." instance=ExtResource( 2 )]
+transform = Transform( -0.00734763, 0, -0.499946, 0, 0.5, 0, 0.499946, 0, -0.00734763, -26.7449, 1.694, 10.1086 )
+script = ExtResource( 4 )
+
+[node name="server9" type="StaticBody" parent="." instance=ExtResource( 2 )]
+transform = Transform( -0.00734763, 0, -0.499946, 0, 0.5, 0, 0.499946, 0, -0.00734763, -28.902, 1.694, 10.1086 )
+script = ExtResource( 4 )
+
+[node name="server10" type="StaticBody" parent="." instance=ExtResource( 2 )]
+transform = Transform( -0.00734763, 0, -0.499946, 0, 0.5, 0, 0.499946, 0, -0.00734763, -31.014, 1.694, 10.1086 )
+script = ExtResource( 4 )
+
+[node name="server4" type="StaticBody" parent="." instance=ExtResource( 2 )]
+transform = Transform( -0.00734763, 0, -0.499946, 0, 0.5, 0, 0.499946, 0, -0.00734763, -13.9684, 1.694, 10.1086 )
+script = ExtResource( 4 )
+
+[node name="server5" type="StaticBody" parent="." instance=ExtResource( 2 )]
+transform = Transform( -0.00734763, 0, -0.499946, 0, 0.5, 0, 0.499946, 0, -0.00734763, -10.121, 1.694, 10.1086 )
+script = ExtResource( 4 )
+
+[node name="server3" type="StaticBody" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.0271702, 0, -0.499261, 0, 0.5, 0, 0.499261, 0, -0.0271702, -20.5146, 0.623098, 10.0933 )
+script = ExtResource( 3 )
+move_location = Vector3( 0, 0, -3 )
