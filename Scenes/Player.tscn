@@ -5,8 +5,9 @@
 
 [sub_resource type="CapsuleShape" id=1]
 
-[sub_resource type="SphereShape" id=2]
-radius = 0.626904
+[sub_resource type="CapsuleShape" id=2]
+radius = 0.702036
+height = 1.73198
 
 [node name="Player" type="KinematicBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.30804, 3.70362, 0 )
@@ -25,7 +26,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0191021, 0.705868, 0.040776
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0191021, 0.038868, -1.44095 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Head/Interract_Area"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0105281, -0.0166936, 0.121817 )
+transform = Transform( 1, 0, 0, 0, 0.0632434, 0.997998, 0, -0.997998, 0.0632434, -0.0105281, -0.643287, -0.115721 )
 shape = SubResource( 2 )
 
 [node name="Analyzer" type="Node2D" parent="."]
