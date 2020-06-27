@@ -31,6 +31,7 @@ margin_top = 1.0
 margin_right = 273.0
 margin_bottom = 128.0
 text = "Random Info Here"
+autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }

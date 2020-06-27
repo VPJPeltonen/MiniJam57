@@ -8,6 +8,7 @@
 [node name="room" parent="." instance=ExtResource( 1 )]
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.1138, 2.36973, 10.7091 )
 
 [node name="Lights" type="Spatial" parent="."]
 
