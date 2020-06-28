@@ -76,16 +76,16 @@ transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 1, -0.606121, 2.31142, 0.82428 
 mesh = SubResource( 2 )
 material/0 = SubResource( 3 )
 
-[node name="alien" parent="." instance=ExtResource( 5 )]
-transform = Transform( -0.0493205, 0, 0.998783, 0, 1, 0, -0.998783, 0, -0.0493205, 9.86885, 1.01042, 0 )
-script = ExtResource( 7 )
-move_location = Vector3( -10, 0, 0 )
-
 [node name="Area" type="Area" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.29488, 0, 0 )
 script = ExtResource( 6 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Area"]
 shape = SubResource( 4 )
+
+[node name="alien" parent="Area" instance=ExtResource( 5 )]
+transform = Transform( -0.0493205, 0, 0.998783, 0, 1, 0, -0.998783, 0, -0.0493205, 19.1637, 1.01042, 0 )
+script = ExtResource( 7 )
+move_location = Vector3( -10, 0, 0 )
 [connection signal="body_entered" from="Area" to="Area" method="_on_Area_body_entered"]
-[connection signal="start_finale" from="Area" to="alien" method="_on_Area_start_finale"]
+[connection signal="start_finale" from="Area" to="Area/alien" method="_on_Area_start_finale"]

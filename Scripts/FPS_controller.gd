@@ -65,9 +65,10 @@ func _physics_process(delta):
 	
 	velocity = move_and_slide(velocity, Vector3.UP)
 
-func freeze():
+func freeze(position):
 	frozen = true
 	$FinaleDarkening.counting = true
+	#look_at(position,Vector3.UP)
 	$AudioStreamPlayer.alien_music()
 
 func add_item(item):
