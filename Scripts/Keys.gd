@@ -26,4 +26,5 @@ func hide_activetable():
 
 func player_activate(player):
 	if player.inventory.has("door code"):
-		get_parent().start_moving()
+		get_parent().get_parent().open_door()
+		player.items_in_range.remove(0)

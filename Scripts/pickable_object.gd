@@ -3,6 +3,7 @@ extends Spatial
 export var info = "This appears to be a cube"
 export var has_item = false
 export var item_held = "none" 
+export var available = false
 
 var picked_up = false
 
@@ -29,7 +30,8 @@ func hide_activetable():
 	outline_mesh.hide()
 
 func player_activate(player):
-	$MeshInstance.hide()
-	outline_mesh.hide()
-	player.add_item(item_held)
-	picked_up = true
+	if available:
+		$MeshInstance.hide()
+		outline_mesh.hide()
+		player.add_item(item_held)
+		picked_up = true

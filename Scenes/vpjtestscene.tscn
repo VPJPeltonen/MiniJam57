@@ -1,28 +1,19 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scenes/server.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/table.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/computer.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/server2.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Scenes/VaultDoor.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Scenes/Keys.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Scripts/Keys.gd" type="Script" id=8]
+[ext_resource path="res://Scenes/safe.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/offceChair.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Assets/Meshes/room.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Scripts/pickable_object.gd" type="Script" id=11]
-[ext_resource path="res://Assets/outline_ material.tres" type="Material" id=12]
 
 [sub_resource type="BakedLightmapData" id=1]
 bounds = AABB( -36.8973, -10, -32.8471, 73.7946, 20, 65.6942 )
 cell_space_transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 147.589, 40, 131.388 )
 cell_subdiv = 10
 octree = PoolByteArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255 )
-
-[sub_resource type="BoxShape" id=2]
-extents = Vector3( 0.46025, 12.0904, 6.60989 )
-
-[sub_resource type="CubeMesh" id=3]
 
 [sub_resource type="CubeMesh" id=4]
 
@@ -33,32 +24,6 @@ emission = Color( 0.87451, 1, 0, 1 )
 emission_energy = 1.0
 emission_operator = 0
 emission_on_uv2 = false
-
-[sub_resource type="BoxShape" id=6]
-extents = Vector3( 1, 1.91551, 1 )
-
-[sub_resource type="PrismMesh" id=7]
-
-[sub_resource type="SpatialMaterial" id=8]
-albedo_color = Color( 0.745098, 0.992157, 0.141176, 1 )
-emission_enabled = true
-emission = Color( 0.87451, 1, 0, 1 )
-emission_energy = 1.0
-emission_operator = 0
-emission_on_uv2 = false
-
-[sub_resource type="ArrayMesh" id=9]
-surfaces/0 = {
-"aabb": AABB( -1.02673, -1.02988, -1.03077, 2.05345, 2.06567, 2.06156 ),
-"array_data": PoolByteArray( 85, 73, 135, 188, 123, 148, 132, 63, 94, 240, 131, 63, 0, 0, 127, 0, 127, 0, 0, 127, 85, 49, 0, 0, 84, 73, 135, 188, 124, 148, 132, 63, 94, 240, 131, 191, 0, 0, 129, 0, 129, 0, 0, 127, 170, 58, 0, 0, 85, 73, 135, 188, 123, 148, 132, 63, 94, 240, 131, 63, 0, 0, 127, 0, 127, 0, 0, 127, 85, 49, 0, 0, 84, 73, 135, 188, 124, 148, 132, 63, 94, 240, 131, 191, 0, 0, 129, 0, 129, 0, 0, 127, 170, 58, 0, 0, 195, 107, 131, 191, 34, 211, 131, 191, 34, 211, 131, 63, 0, 0, 127, 0, 127, 0, 0, 127, 0, 0, 0, 56, 195, 107, 131, 63, 34, 211, 131, 191, 34, 211, 131, 191, 0, 0, 129, 0, 129, 0, 0, 127, 85, 57, 0, 56, 195, 107, 131, 63, 34, 211, 131, 191, 34, 211, 131, 63, 0, 0, 127, 0, 127, 0, 0, 127, 85, 53, 0, 56, 195, 107, 131, 191, 34, 211, 131, 191, 34, 211, 131, 191, 0, 0, 129, 0, 129, 0, 0, 127, 0, 60, 0, 56, 85, 73, 135, 188, 123, 148, 132, 63, 94, 240, 131, 63, 113, 56, 0, 0, 0, 0, 129, 127, 85, 53, 0, 0, 84, 73, 135, 188, 124, 148, 132, 63, 94, 240, 131, 191, 143, 56, 0, 0, 0, 0, 127, 127, 0, 0, 0, 56, 84, 73, 135, 188, 124, 148, 132, 63, 94, 240, 131, 191, 113, 56, 0, 0, 0, 0, 129, 127, 85, 57, 0, 0, 85, 73, 135, 188, 123, 148, 132, 63, 94, 240, 131, 63, 143, 56, 0, 0, 0, 0, 127, 127, 85, 53, 0, 56, 195, 107, 131, 63, 34, 211, 131, 191, 34, 211, 131, 63, 113, 56, 0, 0, 0, 0, 129, 127, 85, 53, 0, 56, 195, 107, 131, 191, 34, 211, 131, 191, 34, 211, 131, 191, 143, 56, 0, 0, 0, 0, 127, 127, 0, 0, 0, 60, 195, 107, 131, 63, 34, 211, 131, 191, 34, 211, 131, 191, 113, 56, 0, 0, 0, 0, 129, 127, 85, 57, 0, 56, 195, 107, 131, 191, 34, 211, 131, 191, 34, 211, 131, 63, 143, 56, 0, 0, 0, 0, 127, 127, 85, 53, 0, 60, 195, 107, 131, 191, 34, 211, 131, 191, 34, 211, 131, 63, 0, 129, 0, 0, 127, 0, 0, 127, 85, 57, 0, 56, 195, 107, 131, 63, 34, 211, 131, 191, 34, 211, 131, 63, 0, 129, 0, 0, 127, 0, 0, 127, 0, 60, 0, 56, 195, 107, 131, 191, 34, 211, 131, 191, 34, 211, 131, 191, 0, 129, 0, 0, 127, 0, 0, 127, 85, 57, 0, 60, 195, 107, 131, 63, 34, 211, 131, 191, 34, 211, 131, 191, 0, 129, 0, 0, 127, 0, 0, 127, 0, 60, 0, 60 ),
-"array_index_data": PoolByteArray( 2, 0, 4, 0, 6, 0, 3, 0, 5, 0, 7, 0, 8, 0, 12, 0, 10, 0, 10, 0, 12, 0, 14, 0, 9, 0, 13, 0, 11, 0, 11, 0, 13, 0, 15, 0, 16, 0, 18, 0, 17, 0, 17, 0, 18, 0, 19, 0 ),
-"blend_shape_data": [  ],
-"format": 97559,
-"index_count": 24,
-"primitive": 4,
-"skeleton_aabb": [  ],
-"vertex_count": 20
-}
 
 [node name="Spatial" type="Spatial"]
 
@@ -129,53 +94,6 @@ transform = Transform( 0.0104102, 0, 0.499892, 0, 0.5, 0, -0.499892, 0, 0.010410
 transform = Transform( 0.0302282, 0, 0.499085, 0, 0.5, 0, -0.499085, 0, 0.0302282, -24.6323, 0.623098, -10.768 )
 move_location = Vector3( 0, 0, -3 )
 
-[node name="Vault" type="Spatial" parent="room/time-1"]
-
-[node name="StaticBody2" type="StaticBody" parent="room/time-1/Vault"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -29.8574, 0, -15.5406 )
-
-[node name="CollisionShape" type="CollisionShape" parent="room/time-1/Vault/StaticBody2"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.501291, 2.10544, 7.63214 )
-shape = SubResource( 2 )
-
-[node name="MeshInstance" type="MeshInstance" parent="room/time-1/Vault/StaticBody2"]
-transform = Transform( 0.504652, 0, 0, 0, 13.183, 0, 0, 0, 6.58256, -0.506355, 0.972985, 7.63252 )
-mesh = SubResource( 3 )
-material/0 = null
-
-[node name="StaticBody3" type="StaticBody" parent="room/time-1/Vault"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -29.8574, 0, 0.259752 )
-
-[node name="CollisionShape" type="CollisionShape" parent="room/time-1/Vault/StaticBody3"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.501291, 2.10544, 7.63214 )
-shape = SubResource( 2 )
-
-[node name="MeshInstance" type="MeshInstance" parent="room/time-1/Vault/StaticBody3"]
-transform = Transform( 0.504652, 0, 0, 0, 13.183, 0, 0, 0, 6.58256, -0.506355, 0.972985, 7.63252 )
-mesh = SubResource( 3 )
-material/0 = null
-
-[node name="StaticBody4" type="StaticBody" parent="room/time-1/Vault"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -29.8574, 7.52382, 0.259752 )
-
-[node name="CollisionShape" type="CollisionShape" parent="room/time-1/Vault/StaticBody4"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.501291, 2.10544, 7.63214 )
-shape = SubResource( 2 )
-
-[node name="MeshInstance" type="MeshInstance" parent="room/time-1/Vault/StaticBody4"]
-transform = Transform( 0.530176, 0, 0, 0, 13.8498, 0, 0, 0, 1.3393, -0.506355, 11.1873, -0.296735 )
-mesh = SubResource( 3 )
-material/0 = null
-
-[node name="VaultDoor" parent="room/time-1/Vault" instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -29.4984, 1.01153, 0.352564 )
-move_location = Vector3( 0, 5, 0 )
-
-[node name="Keys" parent="room/time-1/Vault/VaultDoor" instance=ExtResource( 7 )]
-transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.589014, 0.637502, -1.07074 )
-script = ExtResource( 8 )
-info = "This ancient device requires some kind of code"
-
 [node name="Chairs" type="Spatial" parent="room/time-1"]
 
 [node name="offceChair" parent="room/time-1/Chairs" instance=ExtResource( 9 )]
@@ -217,22 +135,5 @@ transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -7.8472, 0.276034, 5.692
 [node name="computer" parent="room/time-1/Tables/table4" instance=ExtResource( 3 )]
 transform = Transform( 0.0115318, 0, 0.749911, 0, 0.75, 0, -0.749911, 0, 0.0115318, 0, 3.00591, 0.564821 )
 
-[node name="theObject" type="StaticBody" parent="room/time-1"]
-transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -33.8622, 1.25371, 7.19037 )
-script = ExtResource( 11 )
-info = "Strange thing. You should pick it up"
-item_held = "object"
-
-[node name="CollisionShape" type="CollisionShape" parent="room/time-1/theObject"]
-shape = SubResource( 6 )
-
-[node name="MeshInstance" type="MeshInstance" parent="room/time-1/theObject"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.918221, 0 )
-mesh = SubResource( 7 )
-material/0 = SubResource( 8 )
-
-[node name="Outline" type="MeshInstance" parent="room/time-1/theObject"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.918221, 0 )
-visible = false
-mesh = SubResource( 9 )
-material/0 = ExtResource( 12 )
+[node name="safe" parent="room/time-1" instance=ExtResource( 6 )]
+transform = Transform( 0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, -34.586, 1.10544, 0 )
