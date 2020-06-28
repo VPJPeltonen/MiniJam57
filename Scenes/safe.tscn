@@ -92,8 +92,8 @@ mesh = SubResource( 3 )
 material/0 = null
 
 [node name="theObject" parent="." instance=ExtResource( 7 )]
-transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.449558, -1.34453, -0.032317 )
-info = "Strange thing. You should pick it up. It should help me jump farther back."
+transform = Transform( 0.306063, 0, 0.257537, 0, 0.4, 0, -0.257537, 0, 0.306063, -0.00494483, -1.34453, -0.032317 )
+info = "Ancient dagger made with surprisingly advanced methods. You should pick it up. It should help me jump farther back."
 item_held = "mysterious object"
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
