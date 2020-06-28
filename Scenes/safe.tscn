@@ -74,6 +74,7 @@ material/0 = ExtResource( 3 )
 [node name="Keys" parent="door1" instance=ExtResource( 2 )]
 transform = Transform( 0.209009, 0, 0, 0, 0.209009, 0, 0, 0, 0.209009, 1.9758, 0.0152326, 0.764048 )
 script = ExtResource( 4 )
+info = "Some kind of old timey lock that requires correct series of numbers to open"
 
 [node name="door2" type="Spatial" parent="."]
 transform = Transform( -0.190963, 0, 0.981597, 0, 1, 0, -0.981597, 0, -0.190963, 3.74491, 0, 0 )

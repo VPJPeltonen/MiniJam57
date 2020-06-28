@@ -16,6 +16,7 @@
 [node name="time-0" parent="room/times" instance=ExtResource( 3 )]
 
 [node name="time-1" parent="room/times" instance=ExtResource( 4 )]
+visible = false
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.1138, 1.96042, 17.7886 )

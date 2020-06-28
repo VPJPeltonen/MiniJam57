@@ -1,12 +1,7 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Scenes/server.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Scenes/table.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Scenes/computer.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scenes/server2.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/time-1.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Scenes/safe.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Scenes/offceChair.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Assets/Meshes/room.tscn" type="PackedScene" id=10]
 
 [sub_resource type="BakedLightmapData" id=1]
@@ -14,16 +9,6 @@ bounds = AABB( -36.8973, -10, -32.8471, 73.7946, 20, 65.6942 )
 cell_space_transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 147.589, 40, 131.388 )
 cell_subdiv = 10
 octree = PoolByteArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255 )
-
-[sub_resource type="CubeMesh" id=4]
-
-[sub_resource type="SpatialMaterial" id=5]
-albedo_color = Color( 0.85098, 1, 0, 1 )
-emission_enabled = true
-emission = Color( 0.87451, 1, 0, 1 )
-emission_energy = 1.0
-emission_operator = 0
-emission_on_uv2 = false
 
 [node name="Spatial" type="Spatial"]
 
@@ -46,94 +31,4 @@ omni_range = 19.943
 [node name="room" parent="." instance=ExtResource( 10 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.56808, 3.92531, 3.56109 )
 
-[node name="time-1" type="Spatial" parent="room"]
-
-[node name="Servers" type="Spatial" parent="room/time-1"]
-
-[node name="server2" parent="room/time-1/Servers" instance=ExtResource( 1 )]
-transform = Transform( -0.00734763, 0, -0.499946, 0, 0.5, 0, 0.499946, 0, -0.00734763, -18.3032, 1.694, 10.1147 )
-
-[node name="server6" parent="room/time-1/Servers" instance=ExtResource( 1 )]
-transform = Transform( -0.00734763, 0, -0.499946, 0, 0.5, 0, 0.499946, 0, -0.00734763, -16.0912, 1.694, 10.1139 )
-
-[node name="server7" parent="room/time-1/Servers" instance=ExtResource( 1 )]
-transform = Transform( -0.00734763, 0, -0.499946, 0, 0.5, 0, 0.499946, 0, -0.00734763, -24.3457, 1.694, 10.1086 )
-
-[node name="server8" parent="room/time-1/Servers" instance=ExtResource( 1 )]
-transform = Transform( -0.00734763, 0, -0.499946, 0, 0.5, 0, 0.499946, 0, -0.00734763, -26.4311, 1.694, 10.1086 )
-
-[node name="server9" parent="room/time-1/Servers" instance=ExtResource( 1 )]
-transform = Transform( -0.00734763, 0, -0.499946, 0, 0.5, 0, 0.499946, 0, -0.00734763, -28.5557, 1.694, 10.1086 )
-
-[node name="server4" parent="room/time-1/Servers" instance=ExtResource( 1 )]
-transform = Transform( -0.00734763, 0, -0.499946, 0, 0.5, 0, 0.499946, 0, -0.00734763, -13.9684, 1.694, 10.1086 )
-
-[node name="server5" parent="room/time-1/Servers" instance=ExtResource( 1 )]
-transform = Transform( -0.00734763, 0, -0.499946, 0, 0.5, 0, 0.499946, 0, -0.00734763, -10.121, 1.694, 10.1086 )
-
-[node name="server3" parent="room/time-1/Servers" instance=ExtResource( 4 )]
-transform = Transform( -0.0271702, 0, -0.499261, 0, 0.5, 0, 0.499261, 0, -0.0271702, -20.5146, 0.623098, 10.0933 )
-move_location = Vector3( 0, 0, -3 )
-
-[node name="server13" parent="room/time-1/Servers" instance=ExtResource( 1 )]
-transform = Transform( 0.0104102, 0, 0.499892, 0, 0.5, 0, -0.499892, 0, 0.0104102, -20.8012, 1.694, -10.7598 )
-
-[node name="server14" parent="room/time-1/Servers" instance=ExtResource( 1 )]
-transform = Transform( 0.0104102, 0, 0.499892, 0, 0.5, 0, -0.499892, 0, 0.0104102, -18.402, 1.694, -10.7451 )
-
-[node name="server15" parent="room/time-1/Servers" instance=ExtResource( 1 )]
-transform = Transform( 0.0104102, 0, 0.499892, 0, 0.5, 0, -0.499892, 0, 0.0104102, -16.245, 1.694, -10.7319 )
-
-[node name="server16" parent="room/time-1/Servers" instance=ExtResource( 1 )]
-transform = Transform( 0.0104102, 0, 0.499892, 0, 0.5, 0, -0.499892, 0, 0.0104102, -14.133, 1.694, -10.719 )
-
-[node name="server18" parent="room/time-1/Servers" instance=ExtResource( 1 )]
-transform = Transform( 0.0104102, 0, 0.499892, 0, 0.5, 0, -0.499892, 0, 0.0104102, -10.1818, 1.694, -10.6223 )
-
-[node name="server19" parent="room/time-1/Servers" instance=ExtResource( 4 )]
-transform = Transform( 0.0302282, 0, 0.499085, 0, 0.5, 0, -0.499085, 0, 0.0302282, -24.6323, 0.623098, -10.768 )
-move_location = Vector3( 0, 0, -3 )
-
-[node name="Chairs" type="Spatial" parent="room/time-1"]
-
-[node name="offceChair" parent="room/time-1/Chairs" instance=ExtResource( 9 )]
-transform = Transform( -0.33474, 0, 0.371415, 0, 0.5, 0, -0.371415, 0, -0.33474, -2.87922, 0.089469, 3.40972 )
-move_location = Vector3( 2, 0, 0 )
-
-[node name="offceChair2" parent="room/time-1/Chairs" instance=ExtResource( 9 )]
-transform = Transform( -0.498506, 0, -0.0386207, 0, 0.5, 0, 0.0386207, 0, -0.498506, -7.18592, 0.089469, 3.40972 )
-move_location = Vector3( 1, 0, 1 )
-
-[node name="Tables" type="Spatial" parent="room/time-1"]
-
-[node name="table" parent="room/time-1/Tables" instance=ExtResource( 2 )]
-transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -34.0856, 0.290057, 6.89913 )
-
-[node name="table2" parent="room/time-1/Tables" instance=ExtResource( 2 )]
-transform = Transform( -0.499428, 0, 0.0239192, 0, 0.5, 0, -0.0239192, 0, -0.499428, -34.0856, 0.290057, -5.25243 )
-
-[node name="computer2" parent="room/time-1/Tables/table2" instance=ExtResource( 3 )]
-transform = Transform( -0.0461388, 0, 0.748579, 0, 0.75, 0, -0.748579, 0, -0.0461388, 0.267059, 2.86804, 0.700218 )
-
-[node name="table3" parent="room/time-1/Tables" instance=ExtResource( 2 )]
-transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -2.51975, 0.276034, 5.69286 )
-
-[node name="computer" parent="room/time-1/Tables/table3" instance=ExtResource( 3 )]
-transform = Transform( -0.0914151, 0, 0.744408, 0, 0.75, 0, -0.744408, 0, -0.0914151, 0, 2.97911, 0.498435 )
-info = "Ancient data processing unit. There is a a cellulose fibre sheet with numbers 1234"
-has_item = true
-item_held = "door code"
-
-[node name="MeshInstance" type="MeshInstance" parent="room/time-1/Tables/table3"]
-transform = Transform( 0.247953, -0.0501709, 0.00958288, 0.0760361, 0.233676, 0.00047143, -0.119583, 0.0197825, 0.0483495, 0.289177, 3.60098, 1.12823 )
-mesh = SubResource( 4 )
-material/0 = SubResource( 5 )
-
-[node name="table4" parent="room/time-1/Tables" instance=ExtResource( 2 )]
-transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -7.8472, 0.276034, 5.69286 )
-
-[node name="computer" parent="room/time-1/Tables/table4" instance=ExtResource( 3 )]
-transform = Transform( 0.0115318, 0, 0.749911, 0, 0.75, 0, -0.749911, 0, 0.0115318, 0, 3.00591, 0.564821 )
-
-[node name="safe" parent="room/time-1" instance=ExtResource( 6 )]
-transform = Transform( 0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, -34.586, 1.10544, 0 )
+[node name="time-1" parent="room" instance=ExtResource( 1 )]
