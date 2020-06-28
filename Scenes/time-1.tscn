@@ -139,9 +139,9 @@ transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -2.51975, 0.276034, 5.69
 
 [node name="computer" parent="Tables/table3" instance=ExtResource( 5 )]
 transform = Transform( -0.0914151, 0, 0.744408, 0, 0.75, 0, -0.744408, 0, -0.0914151, 0, 2.97911, 0.498435 )
-info = "Ancient data processing unit. There is a a cellulose fibre sheet with numbers 1234"
+info = "Ancient data processing unit. There is a a cellulose fibre sheet with numbers 1234."
 has_item = true
-item_held = "door code"
+item_held = "safe code"
 
 [node name="MeshInstance" type="MeshInstance" parent="Tables/table3"]
 transform = Transform( 0.247953, -0.0501709, 0.00958288, 0.0760361, 0.233676, 0.00047143, -0.119583, 0.0197825, 0.0483495, 0.289177, 3.60098, 1.12823 )

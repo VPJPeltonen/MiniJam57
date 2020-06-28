@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scripts/time_machine.gd" type="Script" id=1]
 [ext_resource path="res://Assets/outline_ material.tres" type="Material" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Scenes/time-0.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/time-1.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/time-4.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Assets/Audio/time_machine.ogg" type="AudioStream" id=8]
 
 [sub_resource type="ArrayMesh" id=1]
 resource_name = "TimeMachineTerminal"
@@ -125,4 +126,7 @@ margin_top = 72.0
 margin_right = 85.0
 margin_bottom = 92.0
 text = "300 000 BC"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
 [connection signal="pressed" from="CanvasLayer/TimeMachineUI/Exit" to="." method="_on_Exit_pressed"]

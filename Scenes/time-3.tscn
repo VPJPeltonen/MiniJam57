@@ -8,12 +8,12 @@
 [ext_resource path="res://Scenes/darkGod.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/pillar.tscn" type="PackedScene" id=8]
 
-[sub_resource type="BoxShape" id=2]
+[sub_resource type="BoxShape" id=1]
 extents = Vector3( 1, 1.91551, 1 )
 
-[sub_resource type="PrismMesh" id=3]
+[sub_resource type="PrismMesh" id=2]
 
-[sub_resource type="ArrayMesh" id=4]
+[sub_resource type="ArrayMesh" id=3]
 surfaces/0 = {
 "aabb": AABB( -1.02673, -1.02988, -1.03077, 2.05345, 2.06567, 2.06156 ),
 "array_data": PoolByteArray( 85, 73, 135, 188, 123, 148, 132, 63, 94, 240, 131, 63, 0, 0, 127, 0, 127, 0, 0, 127, 85, 49, 0, 0, 84, 73, 135, 188, 124, 148, 132, 63, 94, 240, 131, 191, 0, 0, 129, 0, 129, 0, 0, 127, 170, 58, 0, 0, 85, 73, 135, 188, 123, 148, 132, 63, 94, 240, 131, 63, 0, 0, 127, 0, 127, 0, 0, 127, 85, 49, 0, 0, 84, 73, 135, 188, 124, 148, 132, 63, 94, 240, 131, 191, 0, 0, 129, 0, 129, 0, 0, 127, 170, 58, 0, 0, 195, 107, 131, 191, 34, 211, 131, 191, 34, 211, 131, 63, 0, 0, 127, 0, 127, 0, 0, 127, 0, 0, 0, 56, 195, 107, 131, 63, 34, 211, 131, 191, 34, 211, 131, 191, 0, 0, 129, 0, 129, 0, 0, 127, 85, 57, 0, 56, 195, 107, 131, 63, 34, 211, 131, 191, 34, 211, 131, 63, 0, 0, 127, 0, 127, 0, 0, 127, 85, 53, 0, 56, 195, 107, 131, 191, 34, 211, 131, 191, 34, 211, 131, 191, 0, 0, 129, 0, 129, 0, 0, 127, 0, 60, 0, 56, 85, 73, 135, 188, 123, 148, 132, 63, 94, 240, 131, 63, 113, 56, 0, 0, 0, 0, 129, 127, 85, 53, 0, 0, 84, 73, 135, 188, 124, 148, 132, 63, 94, 240, 131, 191, 143, 56, 0, 0, 0, 0, 127, 127, 0, 0, 0, 56, 84, 73, 135, 188, 124, 148, 132, 63, 94, 240, 131, 191, 113, 56, 0, 0, 0, 0, 129, 127, 85, 57, 0, 0, 85, 73, 135, 188, 123, 148, 132, 63, 94, 240, 131, 63, 143, 56, 0, 0, 0, 0, 127, 127, 85, 53, 0, 56, 195, 107, 131, 63, 34, 211, 131, 191, 34, 211, 131, 63, 113, 56, 0, 0, 0, 0, 129, 127, 85, 53, 0, 56, 195, 107, 131, 191, 34, 211, 131, 191, 34, 211, 131, 191, 143, 56, 0, 0, 0, 0, 127, 127, 0, 0, 0, 60, 195, 107, 131, 63, 34, 211, 131, 191, 34, 211, 131, 191, 113, 56, 0, 0, 0, 0, 129, 127, 85, 57, 0, 56, 195, 107, 131, 191, 34, 211, 131, 191, 34, 211, 131, 63, 143, 56, 0, 0, 0, 0, 127, 127, 85, 53, 0, 60, 195, 107, 131, 191, 34, 211, 131, 191, 34, 211, 131, 63, 0, 129, 0, 0, 127, 0, 0, 127, 85, 57, 0, 56, 195, 107, 131, 63, 34, 211, 131, 191, 34, 211, 131, 63, 0, 129, 0, 0, 127, 0, 0, 127, 0, 60, 0, 56, 195, 107, 131, 191, 34, 211, 131, 191, 34, 211, 131, 191, 0, 129, 0, 0, 127, 0, 0, 127, 85, 57, 0, 60, 195, 107, 131, 63, 34, 211, 131, 191, 34, 211, 131, 191, 0, 129, 0, 0, 127, 0, 0, 127, 0, 60, 0, 60 ),
@@ -26,7 +26,7 @@ surfaces/0 = {
 "vertex_count": 20
 }
 
-[sub_resource type="QuadMesh" id=1]
+[sub_resource type="QuadMesh" id=4]
 
 [sub_resource type="SpatialMaterial" id=5]
 params_diffuse_mode = 4
@@ -154,20 +154,20 @@ item_held = "ancient object"
 available = true
 
 [node name="CollisionShape" type="CollisionShape" parent="theObject"]
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="theObject"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.75098, 0 )
-mesh = SubResource( 3 )
+mesh = SubResource( 2 )
 material/0 = ExtResource( 1 )
 
 [node name="Outline" type="MeshInstance" parent="theObject"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.75098, 0 )
 visible = false
-mesh = SubResource( 4 )
+mesh = SubResource( 3 )
 material/0 = ExtResource( 3 )
 
 [node name="darkness" type="MeshInstance" parent="."]
 transform = Transform( -0.454851, 0, -0.998965, 0, 10, 0, 9.98965, 0, -0.0454851, 6.52285, 4.1766, 4.76837e-07 )
-mesh = SubResource( 1 )
+mesh = SubResource( 4 )
 material/0 = SubResource( 5 )

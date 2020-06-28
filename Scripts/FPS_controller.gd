@@ -77,12 +77,13 @@ func add_item(item):
 	else:
 		inventory.append(item)
 		$InventoryUI.update_inventory(inventory)
+		$CollectedSound.play()
 
 func _on_Interract_Area_body_entered(body):
 	if body.has_method("player_activate") and !items_in_range.has(body):
 		items_in_range.append(body)
 		body.show_activetable()
-		
+
 func _on_Interract_Area_body_exited(body):
 	if items_in_range.has(body):
 		items_in_range.remove(items_in_range.find(body))

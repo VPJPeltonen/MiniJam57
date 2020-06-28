@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Scripts/FPS_controller.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/Analyzer.gd" type="Script" id=2]
@@ -8,6 +8,8 @@
 [ext_resource path="res://Scripts/Music_controller.gd" type="Script" id=6]
 [ext_resource path="res://Assets/Audio/supernatural.ogg" type="AudioStream" id=7]
 [ext_resource path="res://Assets/Audio/floatging.ogg" type="AudioStream" id=8]
+[ext_resource path="res://Assets/Audio/bong_001.ogg" type="AudioStream" id=9]
+[ext_resource path="res://Assets/Audio/confirmation_001.ogg" type="AudioStream" id=10]
 
 [sub_resource type="CapsuleShape" id=1]
 
@@ -83,7 +85,7 @@ anchor_right = 1.0
 anchor_bottom = 0.5
 margin_left = 2.0
 margin_top = 3.0
-margin_right = 94.0
+margin_right = 100.0
 margin_bottom = 161.0
 color = Color( 1, 1, 1, 0.588235 )
 __meta__ = {
@@ -93,7 +95,7 @@ __meta__ = {
 [node name="ColorRect" type="ColorRect" parent="InventoryUI/InfoBox2"]
 margin_left = 4.0
 margin_top = 4.0
-margin_right = 89.0
+margin_right = 94.0
 margin_bottom = 155.0
 color = Color( 0.156863, 0.215686, 0.427451, 0.588235 )
 __meta__ = {
@@ -102,7 +104,7 @@ __meta__ = {
 
 [node name="Label" type="Label" parent="InventoryUI/InfoBox2/ColorRect"]
 margin_top = 1.0
-margin_right = 85.0
+margin_right = 89.0
 margin_bottom = 150.0
 custom_fonts/font = ExtResource( 4 )
 text = "Inventory:"
@@ -136,5 +138,11 @@ time_zero = ExtResource( 8 )
 time_one = ExtResource( 8 )
 time_two = ExtResource( 8 )
 time_three = ExtResource( 8 )
+
+[node name="ShowSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+
+[node name="CollectedSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
 [connection signal="body_entered" from="Head/Interract_Area" to="." method="_on_Interract_Area_body_entered"]
 [connection signal="body_exited" from="Head/Interract_Area" to="." method="_on_Interract_Area_body_exited"]

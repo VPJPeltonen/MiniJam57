@@ -25,6 +25,6 @@ func hide_activetable():
 	outline_mesh.hide()
 
 func player_activate(player):
-	if player.inventory.has("door code"):
+	if player.inventory.has("safe code"):
 		get_parent().get_parent().open_door()
 		player.items_in_range.remove(0)

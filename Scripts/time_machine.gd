@@ -8,6 +8,7 @@ export(Array, PackedScene) var packed_time_scenes
 
 var outline_mesh: MeshInstance
 onready var ui: Panel = $CanvasLayer/TimeMachineUI
+onready var sound: AudioStreamPlayer = $AudioStreamPlayer
 
 var time_buttons: Array
 
@@ -32,6 +33,7 @@ func _ready():
 		i += 1
 	enable_time(0, true)
 	ui.hide()
+
 	
 	# Get time scenes
 
@@ -58,6 +60,7 @@ func player_activate(player: FPS_Controller):
 
 func travel_time(time: int):
 	switch_time(time)
+	sound.play()
 	ui.hide()
 	MouseCapture.capture_mouse()
 	

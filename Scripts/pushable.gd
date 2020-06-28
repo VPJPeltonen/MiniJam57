@@ -9,6 +9,7 @@ var second_location
 var current_target
 var moving = false
 var outline_mesh
+onready var sound: AudioStreamPlayer3D = $AudioStreamPlayer3D
 
 func _ready():
 	var path := "MeshInstance/Outline"
@@ -36,6 +37,8 @@ func hide_activetable():
 	outline_mesh.hide()
 
 func player_activate(player):
+	if sound:
+		sound.play()
 	if !moving:
 		if current_target == second_location:
 			current_target = original_location
