@@ -19,14 +19,14 @@ cell_space_transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 147.589, 40, 131.38
 cell_subdiv = 10
 octree = PoolByteArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255 )
 
-[sub_resource type="BoxShape" id=4]
+[sub_resource type="BoxShape" id=2]
 extents = Vector3( 0.46025, 12.0904, 6.60989 )
 
-[sub_resource type="CubeMesh" id=5]
+[sub_resource type="CubeMesh" id=3]
 
-[sub_resource type="CubeMesh" id=2]
+[sub_resource type="CubeMesh" id=4]
 
-[sub_resource type="SpatialMaterial" id=3]
+[sub_resource type="SpatialMaterial" id=5]
 albedo_color = Color( 0.85098, 1, 0, 1 )
 emission_enabled = true
 emission = Color( 0.87451, 1, 0, 1 )
@@ -136,11 +136,11 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -29.8574, 0, -15.5406 )
 
 [node name="CollisionShape" type="CollisionShape" parent="room/time-1/Vault/StaticBody2"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.501291, 2.10544, 7.63214 )
-shape = SubResource( 4 )
+shape = SubResource( 2 )
 
 [node name="MeshInstance" type="MeshInstance" parent="room/time-1/Vault/StaticBody2"]
 transform = Transform( 0.504652, 0, 0, 0, 13.183, 0, 0, 0, 6.58256, -0.506355, 0.972985, 7.63252 )
-mesh = SubResource( 5 )
+mesh = SubResource( 3 )
 material/0 = null
 
 [node name="StaticBody3" type="StaticBody" parent="room/time-1/Vault"]
@@ -148,11 +148,11 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -29.8574, 0, 0.259752 )
 
 [node name="CollisionShape" type="CollisionShape" parent="room/time-1/Vault/StaticBody3"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.501291, 2.10544, 7.63214 )
-shape = SubResource( 4 )
+shape = SubResource( 2 )
 
 [node name="MeshInstance" type="MeshInstance" parent="room/time-1/Vault/StaticBody3"]
 transform = Transform( 0.504652, 0, 0, 0, 13.183, 0, 0, 0, 6.58256, -0.506355, 0.972985, 7.63252 )
-mesh = SubResource( 5 )
+mesh = SubResource( 3 )
 material/0 = null
 
 [node name="StaticBody4" type="StaticBody" parent="room/time-1/Vault"]
@@ -160,11 +160,11 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -29.8574, 7.52382, 0.259752 )
 
 [node name="CollisionShape" type="CollisionShape" parent="room/time-1/Vault/StaticBody4"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.501291, 2.10544, 7.63214 )
-shape = SubResource( 4 )
+shape = SubResource( 2 )
 
 [node name="MeshInstance" type="MeshInstance" parent="room/time-1/Vault/StaticBody4"]
 transform = Transform( 0.530176, 0, 0, 0, 13.8498, 0, 0, 0, 1.3393, -0.506355, 11.1873, -0.296735 )
-mesh = SubResource( 5 )
+mesh = SubResource( 3 )
 material/0 = null
 
 [node name="VaultDoor" parent="room/time-1/Vault" instance=ExtResource( 6 )]
@@ -208,8 +208,8 @@ item_held = "door code"
 
 [node name="MeshInstance" type="MeshInstance" parent="room/time-1/Tables/table3"]
 transform = Transform( 0.247953, -0.0501709, 0.00958288, 0.0760361, 0.233676, 0.00047143, -0.119583, 0.0197825, 0.0483495, 0.289177, 3.60098, 1.12823 )
-mesh = SubResource( 2 )
-material/0 = SubResource( 3 )
+mesh = SubResource( 4 )
+material/0 = SubResource( 5 )
 
 [node name="table4" parent="room/time-1/Tables" instance=ExtResource( 2 )]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -7.8472, 0.276034, 5.69286 )

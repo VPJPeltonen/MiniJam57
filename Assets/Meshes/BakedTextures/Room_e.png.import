@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/TimeMachine.002_ao.png-77ffceeffccf1bcf06b6d4361fa998c4.s3tc.stex"
-path.etc="res://.import/TimeMachine.002_ao.png-77ffceeffccf1bcf06b6d4361fa998c4.etc.stex"
+path.s3tc="res://.import/Room_e.png-1075643d918ee9924303491517fd47d5.s3tc.stex"
+path.etc="res://.import/Room_e.png-1075643d918ee9924303491517fd47d5.etc.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/Meshes/BakedTextures/TimeMachine.002_ao.png"
-dest_files=[ "res://.import/TimeMachine.002_ao.png-77ffceeffccf1bcf06b6d4361fa998c4.s3tc.stex", "res://.import/TimeMachine.002_ao.png-77ffceeffccf1bcf06b6d4361fa998c4.etc.stex" ]
+source_file="res://Assets/Meshes/BakedTextures/Room_e.png"
+dest_files=[ "res://.import/Room_e.png-1075643d918ee9924303491517fd47d5.s3tc.stex", "res://.import/Room_e.png-1075643d918ee9924303491517fd47d5.etc.stex" ]
 
 [params]
 

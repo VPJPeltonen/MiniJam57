@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/Room.002_ao.png-c10a0102804b666ed24f20e171a68cb7.s3tc.stex"
-path.etc="res://.import/Room.002_ao.png-c10a0102804b666ed24f20e171a68cb7.etc.stex"
+path.s3tc="res://.import/Pillars_t.png-9b407ce27aa55559e381d1905b764cd6.s3tc.stex"
+path.etc="res://.import/Pillars_t.png-9b407ce27aa55559e381d1905b764cd6.etc.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/Meshes/BakedTextures/Room.002_ao.png"
-dest_files=[ "res://.import/Room.002_ao.png-c10a0102804b666ed24f20e171a68cb7.s3tc.stex", "res://.import/Room.002_ao.png-c10a0102804b666ed24f20e171a68cb7.etc.stex" ]
+source_file="res://Assets/Meshes/BakedTextures/Pillars_t.png"
+dest_files=[ "res://.import/Pillars_t.png-9b407ce27aa55559e381d1905b764cd6.s3tc.stex", "res://.import/Pillars_t.png-9b407ce27aa55559e381d1905b764cd6.etc.stex" ]
 
 [params]
 

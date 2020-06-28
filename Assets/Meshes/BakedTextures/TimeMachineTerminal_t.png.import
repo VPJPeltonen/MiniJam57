@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/Pillars.001_ao.png-edd83f15b86c233dcdb764ba3e52b91d.s3tc.stex"
-path.etc="res://.import/Pillars.001_ao.png-edd83f15b86c233dcdb764ba3e52b91d.etc.stex"
+path.s3tc="res://.import/TimeMachineTerminal_t.png-b44f01ab0a9b0c19f96679638b0eaeb2.s3tc.stex"
+path.etc="res://.import/TimeMachineTerminal_t.png-b44f01ab0a9b0c19f96679638b0eaeb2.etc.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/Meshes/BakedTextures/Pillars.001_ao.png"
-dest_files=[ "res://.import/Pillars.001_ao.png-edd83f15b86c233dcdb764ba3e52b91d.s3tc.stex", "res://.import/Pillars.001_ao.png-edd83f15b86c233dcdb764ba3e52b91d.etc.stex" ]
+source_file="res://Assets/Meshes/BakedTextures/TimeMachineTerminal_t.png"
+dest_files=[ "res://.import/TimeMachineTerminal_t.png-b44f01ab0a9b0c19f96679638b0eaeb2.s3tc.stex", "res://.import/TimeMachineTerminal_t.png-b44f01ab0a9b0c19f96679638b0eaeb2.etc.stex" ]
 
 [params]
 

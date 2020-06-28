@@ -18,7 +18,7 @@ surfaces/0 = {
 "vertex_count": 577
 }
 
-[sub_resource type="BoxShape" id=3]
+[sub_resource type="BoxShape" id=2]
 extents = Vector3( 3.57713, 2.04873, 1.76198 )
 
 [node name="table" type="StaticBody"]
@@ -31,4 +31,4 @@ material/0 = ExtResource( 2 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.704935 )
-shape = SubResource( 3 )
+shape = SubResource( 2 )

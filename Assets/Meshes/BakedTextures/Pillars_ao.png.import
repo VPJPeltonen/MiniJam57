@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/TimeMachine.002_t.png-62b0812d84f6919902f61ee577143d3e.s3tc.stex"
-path.etc="res://.import/TimeMachine.002_t.png-62b0812d84f6919902f61ee577143d3e.etc.stex"
+path.s3tc="res://.import/Pillars_ao.png-d283a0115a01167cc3f06680814ba893.s3tc.stex"
+path.etc="res://.import/Pillars_ao.png-d283a0115a01167cc3f06680814ba893.etc.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc" ],
 "vram_texture": true
@@ -11,13 +11,13 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/Meshes/BakedTextures/TimeMachine.002_t.png"
-dest_files=[ "res://.import/TimeMachine.002_t.png-62b0812d84f6919902f61ee577143d3e.s3tc.stex", "res://.import/TimeMachine.002_t.png-62b0812d84f6919902f61ee577143d3e.etc.stex" ]
+source_file="res://Assets/Meshes/BakedTextures/Pillars_ao.png"
+dest_files=[ "res://.import/Pillars_ao.png-d283a0115a01167cc3f06680814ba893.s3tc.stex", "res://.import/Pillars_ao.png-d283a0115a01167cc3f06680814ba893.etc.stex" ]
 
 [params]
 
 compress/mode=2
-compress/lossy_quality=0.7
+compress/lossy_quality=0.95
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
