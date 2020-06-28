@@ -63,6 +63,7 @@ func add_item(item):
 		return
 	else:
 		inventory.append(item)
+		$InventoryUI.update_inventory(inventory)
 
 func _on_Interract_Area_body_entered(body):
 	if body.has_method("player_activate") and !items_in_range.has(body):

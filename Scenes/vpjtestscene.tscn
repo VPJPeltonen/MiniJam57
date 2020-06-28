@@ -221,7 +221,6 @@ transform = Transform( 0.0115318, 0, 0.749911, 0, 0.75, 0, -0.749911, 0, 0.01153
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -33.8622, 1.25371, 7.19037 )
 script = ExtResource( 11 )
 info = "Strange thing. You should pick it up"
-has_item = true
 item_held = "object"
 
 [node name="CollisionShape" type="CollisionShape" parent="room/time-1/theObject"]

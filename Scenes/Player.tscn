@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/FPS_controller.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/Analyzer.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/InventoryUI.gd" type="Script" id=3]
 
 [sub_resource type="CapsuleShape" id=1]
 
@@ -61,6 +62,43 @@ margin_top = 1.0
 margin_right = 273.0
 margin_bottom = 128.0
 text = "Random Info Here"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InventoryUI" type="Node2D" parent="."]
+script = ExtResource( 3 )
+
+[node name="InfoBox2" type="ColorRect" parent="InventoryUI"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 2.0
+margin_top = 3.0
+margin_right = 94.0
+margin_bottom = 161.0
+color = Color( 1, 1, 1, 0.588235 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="InventoryUI/InfoBox2"]
+margin_left = 4.0
+margin_top = 4.0
+margin_right = 89.0
+margin_bottom = 155.0
+color = Color( 0.305882, 0.427451, 0.843137, 0.588235 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="InventoryUI/InfoBox2/ColorRect"]
+margin_top = 1.0
+margin_right = 85.0
+margin_bottom = 150.0
+text = "Inventory:"
 autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false

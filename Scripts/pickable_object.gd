@@ -31,4 +31,5 @@ func hide_activetable():
 func player_activate(player):
 	$MeshInstance.hide()
 	outline_mesh.hide()
+	player.add_item(item_held)
 	picked_up = true
