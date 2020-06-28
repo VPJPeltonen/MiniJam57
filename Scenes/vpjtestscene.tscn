@@ -1,7 +1,11 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://Scenes/time-1.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/block.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/pillar.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/pushable_block.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/darkGod.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/theObject.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Assets/Meshes/room.tscn" type="PackedScene" id=10]
 
 [sub_resource type="BakedLightmapData" id=1]
@@ -31,4 +35,95 @@ omni_range = 19.943
 [node name="room" parent="." instance=ExtResource( 10 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.56808, 3.92531, 3.56109 )
 
-[node name="time-1" parent="room" instance=ExtResource( 1 )]
+[node name="time-3" type="Spatial" parent="room"]
+
+[node name="pillars" type="Spatial" parent="room/time-3"]
+
+[node name="pillar" parent="room/time-3/pillars" instance=ExtResource( 2 )]
+transform = Transform( 0.647016, -0.761643, -0.0356383, 0, 0.0467403, -0.998907, 0.762476, 0.646309, 0.0302417, -18.7334, 0.759237, 11.6038 )
+
+[node name="pillar2" parent="room/time-3/pillars" instance=ExtResource( 2 )]
+transform = Transform( 0.141195, 0.989502, 0.0308279, 0.332538, -0.0180742, -0.942917, -0.932461, 0.143386, -0.331598, -11.8256, 0.759237, 2.19127 )
+
+[node name="pillar3" parent="room/time-3/pillars" instance=ExtResource( 2 )]
+transform = Transform( 0.79691, 0.603438, 0.0282357, 0, 0.0467403, -0.998907, -0.604099, 0.796039, 0.0372478, -20.0222, 0.759237, 2.58709 )
+
+[node name="pillar4" parent="room/time-3/pillars" instance=ExtResource( 2 )]
+transform = Transform( 0.99577, 0.0917836, 0.00429468, 0, 0.0467403, -0.998907, -0.091884, 0.994681, 0.0465425, -28.7658, 0.759237, -6.49631 )
+
+[node name="pillar5" parent="room/time-3/pillars" instance=ExtResource( 2 )]
+transform = Transform( 0.999343, 0.036203, 0.00169399, 0, 0.0467403, -0.998907, -0.0362426, 0.998251, 0.0467096, -16.2117, 0.759237, -16.792 )
+
+[node name="pillar6" parent="room/time-3/pillars" instance=ExtResource( 2 )]
+transform = Transform( 0.224176, 0.974339, 0.0202018, -0.0208541, 0.0255207, -0.999457, -0.974326, 0.223633, 0.0260401, -26.5073, 0.759239, -6.75716 )
+
+[node name="pillar8" parent="room/time-3/pillars" instance=ExtResource( 2 )]
+transform = Transform( 0.999671, -0.0143904, -0.021226, -0.00607163, 0.67136, -0.741106, 0.0249151, 0.740991, 0.671052, -22.94, 0.759239, -16.1368 )
+
+[node name="pillar7" parent="room/time-3/pillars" instance=ExtResource( 2 )]
+transform = Transform( 0.949513, 0.313385, 0.0146637, 0, 0.0467403, -0.998907, -0.313727, 0.948475, 0.0443805, -27.0621, 0.759239, 3.99249 )
+
+[node name="boulders" type="Spatial" parent="room/time-3"]
+
+[node name="pushable_block" parent="room/time-3/boulders" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15.3541, 1.00083, 12.1473 )
+info = "This sandstone block seems light enough to push"
+move_location = Vector3( 1, 0, -3 )
+
+[node name="pushable_block2" parent="room/time-3/boulders" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -27.8743, 1.00083, 0.926312 )
+info = "This sandstone block seems light enough to push"
+move_location = Vector3( -3, 0, 0 )
+
+[node name="block2" parent="room/time-3/boulders" instance=ExtResource( 1 )]
+transform = Transform( 1.20337, 0, -0.895493, 0, 1.5, 0, 0.895493, 0, 1.20337, -12.0514, 1.46484, 13.8461 )
+
+[node name="block4" parent="room/time-3/boulders" instance=ExtResource( 1 )]
+transform = Transform( 1.20337, 0, -0.895493, 0, 1.5, 0, 0.895493, 0, 1.20337, -19.9413, 1.46484, 8.37622 )
+
+[node name="block5" parent="room/time-3/boulders" instance=ExtResource( 1 )]
+transform = Transform( 1.42641, 0, 0.464073, 0, 1.5, 0, -0.464073, 0, 1.42641, -19.0082, 1.46484, -4.28954 )
+
+[node name="block6" parent="room/time-3/boulders" instance=ExtResource( 1 )]
+transform = Transform( 1.42641, 0, 0.464073, 0.00906276, -1.49971, -0.0278559, 0.463985, 0.0292931, -1.42613, -14.9483, 1.46484, -3.57544 )
+
+[node name="block9" parent="room/time-3/boulders" instance=ExtResource( 1 )]
+transform = Transform( 0.393675, 0.0292581, -1.44712, 0.00906276, -1.49971, -0.0278559, -1.44739, -0.00143249, -0.393777, -14.7934, 1.46484, -7.85768 )
+
+[node name="block10" parent="room/time-3/boulders" instance=ExtResource( 1 )]
+transform = Transform( 1.08871, -0.54249, -0.877736, -0.410136, -1.39835, 0.355542, -0.946839, -0.01806, -1.16326, -12.1319, 1.36944, -5.26752 )
+
+[node name="block11" parent="room/time-3/boulders" instance=ExtResource( 1 )]
+transform = Transform( 1.10307, 0.462775, -0.905031, 0.369781, -1.42671, -0.278835, -0.946839, -0.01806, -1.16326, -16.524, 4.46865, -5.26752 )
+
+[node name="block12" parent="room/time-3/boulders" instance=ExtResource( 1 )]
+transform = Transform( -0.197373, 0, -1.48696, 0, 1.5, 0, 1.48696, 0, -0.197373, 1.28602, 1.46484, -5.6056 )
+
+[node name="block13" parent="room/time-3/boulders" instance=ExtResource( 1 )]
+transform = Transform( -1.03444, -0.0264212, 1.08592, 0.00906276, -1.49971, -0.0278559, 1.08621, -0.0126493, 1.03441, -1.11119, 1.46484, -2.25214 )
+
+[node name="block14" parent="room/time-3/boulders" instance=ExtResource( 1 )]
+transform = Transform( 1.13549, -0.0113421, 0.980065, 0.00906276, -1.49971, -0.0278559, 0.980089, 0.0270082, -1.13521, 2.6843, 1.46484, -0.263202 )
+
+[node name="block15" parent="room/time-3/boulders" instance=ExtResource( 1 )]
+transform = Transform( 0.383888, 0.250546, 1.42824, -0.410136, -1.39835, 0.355542, 1.39083, -0.481506, -0.289367, -0.80118, 1.36944, 1.01884 )
+
+[node name="block16" parent="room/time-3/boulders" instance=ExtResource( 1 )]
+transform = Transform( 0.377687, -0.183545, 1.44002, 0.369781, -1.42671, -0.278835, 1.40379, 0.425204, -0.313986, 1.09539, 4.46865, -2.94262 )
+
+[node name="block8" parent="room/time-3/boulders" instance=ExtResource( 1 )]
+transform = Transform( 1.42641, 0, 0.464073, 0.00906276, -1.49971, -0.0278559, 0.463985, 0.0292931, -1.42613, -7.81573, 1.46484, 6.02136 )
+
+[node name="block7" parent="room/time-3/boulders" instance=ExtResource( 1 )]
+transform = Transform( 0.737268, 0, 1.30631, 0, 1.5, 0, -1.30631, 0, 0.737268, -11.3131, 1.46484, -1.02631 )
+
+[node name="block3" parent="room/time-3/boulders" instance=ExtResource( 1 )]
+transform = Transform( -0.278899, 1.45916, 0.207544, -1.1706, -0.347648, 0.87111, 0.895493, 0, 1.20337, -25.4471, 1.46484, 12.566 )
+
+[node name="darkGod" parent="room/time-3" instance=ExtResource( 4 )]
+transform = Transform( -0.999999, 0, -0.00148335, 0, 1, 0, 0.00148335, 0, -0.999999, -34.5702, 0.6448, 0 )
+info = "Statue of some ancient god made from strange black oily stone. Its eyes are made of gemstones"
+
+[node name="theObject" parent="room/time-3" instance=ExtResource( 6 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -18.9286, 0.349723, -25.0033 )
+available = true
