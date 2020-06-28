@@ -4,11 +4,12 @@ export var info = "This is the terminal of my time machine. I can use it to jump
 export var has_item = false
 export var item_held = "none"
 
+export(Array, PackedScene) var packed_time_scenes
+
 var outline_mesh: MeshInstance
 onready var ui: Panel = $CanvasLayer/TimeMachineUI
 
 var time_buttons: Array
-var time_scenes: Array
 
 func _ready():
 	var path := "MeshInstance/Outline"
@@ -34,8 +35,7 @@ func _ready():
 	ui.hide()
 	
 	# Get time scenes
-	var times_node: Spatial = get_tree().get_nodes_in_group("times")[0]
-	time_scenes = times_node.get_children()
+
 	switch_time(0)
 
 
@@ -59,9 +59,12 @@ func travel_time(time: int):
 	MouseCapture.capture_mouse()
 	
 func switch_time(time: int):
-	# Hide all times
+	# Delete all old times
+	var times_node: Spatial = get_tree().get_nodes_in_group("times")[0]
+	var time_scenes = times_node.get_children()	
 	for node in time_scenes:
 		var scene: Spatial = node
-		scene.hide()
-	# Show selected scene
-	time_scenes[time].show()
+		scene.queue_free()
+	
+	var new_scene = packed_time_scenes[time].instance()
+	times_node.add_child(new_scene)

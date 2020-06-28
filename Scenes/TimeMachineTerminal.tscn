@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scripts/time_machine.gd" type="Script" id=1]
 [ext_resource path="res://Assets/outline_ material.tres" type="Material" id=2]
 [ext_resource path="res://Assets/Meshes/Materials/TimeMachineTerminal.tres" type="Material" id=3]
+[ext_resource path="res://Scenes/time-0.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/time-1.tscn" type="PackedScene" id=6]
 
 [sub_resource type="ArrayMesh" id=1]
 resource_name = "TimeMachineTerminal"
@@ -38,6 +40,7 @@ data = PoolVector3Array( -0.0506, 1.9385, -0.1981, -0.0506, 1.0242, 0.1981, -0.0
 "time_machine",
 ]]
 script = ExtResource( 1 )
+packed_time_scenes = [ ExtResource( 5 ), ExtResource( 6 ), null ]
 
 [node name="TimeMachineTerminal" type="MeshInstance" parent="."]
 mesh = SubResource( 1 )

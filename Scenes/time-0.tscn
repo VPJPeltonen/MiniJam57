@@ -1,3 +1,105 @@
-[gd_scene format=2]
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Assets/Meshes/time0/Table.scn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/Meshes/time0/Powercell.scn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/Meshes/time0/Stuff.scn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/Meshes/time0/MachineThing001.scn" type="PackedScene" id=5]
+[ext_resource path="res://Assets/Meshes/time0/AngledPipes.scn" type="PackedScene" id=6]
+[ext_resource path="res://Assets/Meshes/time0/Cabinet.scn" type="PackedScene" id=7]
+[ext_resource path="res://Assets/Meshes/time0/Screen001.scn" type="PackedScene" id=8]
+[ext_resource path="res://Assets/Meshes/time0/Card.scn" type="PackedScene" id=9]
+[ext_resource path="res://Scripts/pickable_object.gd" type="Script" id=10]
+[ext_resource path="res://Assets/outline_ material.tres" type="Material" id=11]
+
+[sub_resource type="ConcavePolygonShape" id=1]
+data = PoolVector3Array( -1, -0.0254, 1.6541, 1, -0.0254, -1.6541, -1, -0.0254, -1.6541, -1, -0.0254, 1.6541, 1, -0.0254, 1.6541, 1, -0.0254, -1.6541, 1, 0.0254, 1.6541, -1, 0.0254, -1.6541, 1, 0.0254, -1.6541, 1, 0.0254, 1.6541, -1, 0.0254, 1.6541, -1, 0.0254, -1.6541, 1, 0.0254, -1.6541, -1, -0.0254, -1.6541, 1, -0.0254, -1.6541, 1, 0.0254, -1.6541, -1, 0.0254, -1.6541, -1, -0.0254, -1.6541, -1, 0.0254, 1.6541, 1, -0.0254, 1.6541, -1, -0.0254, 1.6541, -1, 0.0254, 1.6541, 1, 0.0254, 1.6541, 1, -0.0254, 1.6541, 1, 0.0254, 1.6541, 1, -0.0254, -1.6541, 1, -0.0254, 1.6541, 1, 0.0254, 1.6541, 1, 0.0254, -1.6541, 1, -0.0254, -1.6541, -1, 0.0254, -1.6541, -1, -0.0254, 1.6541, -1, -0.0254, -1.6541, -1, 0.0254, -1.6541, -1, 0.0254, 1.6541, -1, -0.0254, 1.6541 )
+
+[sub_resource type="ArrayMesh" id=2]
+surfaces/0 = {
+"aabb": AABB( -1.02887, -0.0542268, -1.68301, 2.05773, 0.108454, 3.36603 ),
+"array_data": PoolByteArray( 238, 177, 131, 191, 234, 28, 94, 189, 240, 108, 215, 63, 0, 130, 0, 0, 127, 0, 0, 127, 217, 56, 99, 57, 238, 177, 131, 191, 234, 28, 94, 189, 240, 108, 215, 191, 0, 130, 0, 0, 127, 0, 0, 127, 217, 56, 99, 57, 238, 177, 131, 63, 234, 28, 94, 189, 240, 108, 215, 191, 0, 130, 0, 0, 127, 0, 0, 127, 217, 56, 99, 57, 238, 177, 131, 63, 234, 28, 94, 189, 240, 108, 215, 63, 0, 130, 0, 0, 127, 0, 0, 127, 217, 56, 99, 57, 238, 177, 131, 63, 234, 28, 94, 61, 240, 108, 215, 63, 0, 126, 0, 0, 127, 0, 0, 127, 217, 56, 99, 57, 238, 177, 131, 63, 234, 28, 94, 61, 240, 108, 215, 191, 0, 126, 0, 0, 127, 0, 0, 127, 217, 56, 99, 57, 238, 177, 131, 191, 234, 28, 94, 61, 240, 108, 215, 191, 0, 126, 0, 0, 127, 0, 0, 127, 217, 56, 99, 57, 238, 177, 131, 191, 234, 28, 94, 61, 240, 108, 215, 63, 0, 126, 0, 0, 127, 0, 0, 127, 217, 56, 99, 57, 238, 177, 131, 63, 234, 28, 94, 61, 240, 108, 215, 191, 0, 0, 129, 0, 127, 0, 0, 127, 217, 56, 99, 57, 238, 177, 131, 63, 234, 28, 94, 189, 240, 108, 215, 191, 0, 0, 129, 0, 127, 0, 0, 127, 217, 56, 99, 57, 238, 177, 131, 191, 234, 28, 94, 189, 240, 108, 215, 191, 0, 0, 129, 0, 127, 0, 0, 127, 217, 56, 99, 57, 238, 177, 131, 191, 234, 28, 94, 61, 240, 108, 215, 191, 0, 0, 129, 0, 127, 0, 0, 127, 217, 56, 99, 57, 238, 177, 131, 191, 234, 28, 94, 61, 240, 108, 215, 63, 0, 0, 127, 0, 127, 0, 0, 129, 217, 56, 99, 57, 238, 177, 131, 191, 234, 28, 94, 189, 240, 108, 215, 63, 0, 0, 127, 0, 127, 0, 0, 129, 217, 56, 99, 57, 238, 177, 131, 63, 234, 28, 94, 189, 240, 108, 215, 63, 0, 0, 127, 0, 127, 0, 0, 129, 217, 56, 99, 57, 238, 177, 131, 63, 234, 28, 94, 61, 240, 108, 215, 63, 0, 0, 127, 0, 127, 0, 0, 129, 217, 56, 99, 57, 238, 177, 131, 63, 234, 28, 94, 61, 240, 108, 215, 63, 127, 0, 0, 0, 127, 0, 0, 127, 217, 56, 99, 57, 238, 177, 131, 63, 234, 28, 94, 189, 240, 108, 215, 63, 127, 0, 0, 0, 127, 0, 0, 127, 217, 56, 99, 57, 238, 177, 131, 63, 234, 28, 94, 189, 240, 108, 215, 191, 127, 0, 0, 0, 127, 0, 0, 127, 217, 56, 99, 57, 238, 177, 131, 63, 234, 28, 94, 61, 240, 108, 215, 191, 127, 0, 0, 0, 127, 0, 0, 127, 217, 56, 99, 57, 238, 177, 131, 191, 234, 28, 94, 61, 240, 108, 215, 191, 129, 0, 0, 0, 127, 0, 0, 127, 217, 56, 99, 57, 238, 177, 131, 191, 234, 28, 94, 189, 240, 108, 215, 191, 129, 0, 0, 0, 127, 0, 0, 127, 217, 56, 99, 57, 238, 177, 131, 191, 234, 28, 94, 189, 240, 108, 215, 63, 129, 0, 0, 0, 127, 0, 0, 127, 217, 56, 99, 57, 238, 177, 131, 191, 234, 28, 94, 61, 240, 108, 215, 63, 129, 0, 0, 0, 127, 0, 0, 127, 217, 56, 99, 57 ),
+"array_index_data": PoolByteArray( 0, 0, 1, 0, 2, 0, 0, 0, 2, 0, 3, 0, 4, 0, 5, 0, 6, 0, 4, 0, 6, 0, 7, 0, 8, 0, 9, 0, 10, 0, 8, 0, 10, 0, 11, 0, 12, 0, 13, 0, 14, 0, 12, 0, 14, 0, 15, 0, 16, 0, 17, 0, 18, 0, 16, 0, 18, 0, 19, 0, 20, 0, 21, 0, 22, 0, 20, 0, 22, 0, 23, 0 ),
+"blend_shape_data": [  ],
+"format": 97559,
+"index_count": 36,
+"primitive": 4,
+"skeleton_aabb": [  ],
+"vertex_count": 24
+}
 
 [node name="time-0" type="Spatial"]
+
+[node name="Table" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.990422, 0.0403335, -0.132049, -0.0406898, 0.999172, 0, 0.131939, 0.00537305, 0.991243, -11.6851, 0.499204, 16.4612 )
+
+[node name="Powercell" parent="Table" instance=ExtResource( 3 )]
+transform = Transform( 1, 1.22236e-09, 0, -2.50293e-09, 1, 4.65661e-10, 0, 0, 1, 0.0454521, 0.946958, -2.39229 )
+
+[node name="Powercell2" parent="Table" instance=ExtResource( 3 )]
+transform = Transform( 0.832041, -0.0997789, 0.545666, -0.550161, -0.0226617, 0.834751, -0.0709249, -0.994752, -0.0737499, -0.0538015, 0.960576, 2.08234 )
+
+[node name="Stuff" parent="Table" instance=ExtResource( 4 )]
+transform = Transform( 0.434135, -0.000220528, -0.000199202, 0.000219443, 0.434129, -0.00235298, 0.000200395, 0.00235288, 0.434129, 0.0623598, 0.59406, -0.696409 )
+
+[node name="Table2" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.990422, 0.0403335, -0.132049, -0.0406898, 0.999172, 0, 0.131939, 0.00537305, 0.991243, -23.1835, 0.499204, 16.5211 )
+
+[node name="Stuff" parent="Table2" instance=ExtResource( 4 )]
+transform = Transform( 0.434135, -0.000220529, -0.000199202, 0.00021944, 0.434129, -0.00235298, 0.000200409, 0.00235288, 0.434129, -0.157209, 0.585118, -2.34603 )
+
+[node name="Stuff2" parent="Table2" instance=ExtResource( 4 )]
+transform = Transform( 0.167737, -0.00877116, 0.400326, -0.0106292, 0.43378, 0.0139578, -0.400281, -0.0151943, 0.167386, 0.374132, 0.606756, 1.64581 )
+
+[node name="AngledPipes" parent="." instance=ExtResource( 6 )]
+transform = Transform( 5.96046e-08, 1, 0, -1, 5.96046e-08, 0, 0, 0, 1, -0.94937, 7.00376, 8.37309 )
+
+[node name="AngledPipes2" parent="." instance=ExtResource( 6 )]
+transform = Transform( 5.96046e-08, 1, 0, -1, 5.96046e-08, 0, 0, 0, 1, -0.94937, 7.00376, -8.35575 )
+
+[node name="MachineThing001" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.948708, 3, 6.6505 )
+
+[node name="MachineThing002" parent="." instance=ExtResource( 5 )]
+transform = Transform( -1, 0, 8.9407e-08, 0, 1, 0, -8.9407e-08, 0, -1, -0.948708, 3, -7.83837 )
+
+[node name="MachineThing003" parent="." instance=ExtResource( 5 )]
+transform = Transform( -1, 0, 8.9407e-08, 0, 1, 0, -8.9407e-08, 0, -1, -29.9487, 3, -13.1915 )
+
+[node name="Cabinet" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23.5171, 1.26772, -26.9065 )
+
+[node name="Cabinet2" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.8391, 1.26772, -26.9065 )
+
+[node name="Cabinet3" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16.1647, 1.26772, -26.9065 )
+
+[node name="Cabinet4" parent="." instance=ExtResource( 7 )]
+transform = Transform( 0.0308699, 0, 0.999523, 0, 1, 0, -0.999523, 0, 0.0308699, -25.1152, 1.26772, -15.6692 )
+
+[node name="Cabinet5" parent="." instance=ExtResource( 7 )]
+transform = Transform( 0.0308699, 0, 0.999523, 0, 1, 0, -0.999523, 0, 0.0308699, -25.0017, 1.26772, -19.3454 )
+
+[node name="Keycard" type="StaticBody" parent="Cabinet5"]
+transform = Transform( 0.142948, 0, -0.0424938, 0, 0.14913, 0, 0.0424938, 0, 0.142948, 0.55447, 0.284361, -0.159681 )
+script = ExtResource( 10 )
+info = ".This is the keycard I am looking for"
+has_item = true
+item_held = "keycard"
+
+[node name="CollisionShape" type="CollisionShape" parent="Cabinet5/Keycard"]
+shape = SubResource( 1 )
+
+[node name="Card" parent="Cabinet5/Keycard" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0, 0, 0 )
+
+[node name="Outline" type="MeshInstance" parent="Cabinet5/Keycard"]
+transform = Transform( 1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0, 0, 0 )
+mesh = SubResource( 2 )
+material/0 = ExtResource( 11 )
+
+[node name="Cabinet6" parent="." instance=ExtResource( 7 )]
+transform = Transform( 0.0308699, 0, 0.999523, 0, 1, 0, -0.999523, 0, 0.0308699, -24.8882, 1.26772, -23.018 )
+
+[node name="Screen001" parent="." instance=ExtResource( 8 )]
+transform = Transform( -0.533317, 0, -4.72101e-07, 0, 3.00372, 0, 1.73777e-07, 0, -1.44887, -37.0821, 4.02574, 0 )

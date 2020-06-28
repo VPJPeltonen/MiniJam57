@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/room.glb-c1fad131eba248b6ffa2271020229ec1.scn"
+path="res://.import/time0.glb-f6b247bd3b90440df4ce078b659135cb.scn"
 
 [deps]
 
-source_file="res://Assets/Meshes/room.glb"
-dest_files=[ "res://.import/room.glb-c1fad131eba248b6ffa2271020229ec1.scn" ]
+source_file="res://Assets/Meshes/time0/time0.glb"
+dest_files=[ "res://.import/time0.glb-f6b247bd3b90440df4ce078b659135cb.scn" ]
 
 [params]
 

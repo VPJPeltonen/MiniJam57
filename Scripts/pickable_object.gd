@@ -1,6 +1,6 @@
 extends Spatial
 
-export var info = "This appears to be a cube"
+export var info = "This is an object. Fix it you dev!"
 export var has_item = false
 export var item_held = "none" 
 export var available = false
