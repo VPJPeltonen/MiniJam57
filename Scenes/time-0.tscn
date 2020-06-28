@@ -124,12 +124,10 @@ transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -25.449
 [node name="AntiGravChair" parent="OfficeArea" instance=ExtResource( 9 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16.7211, 0.941097, -1.05916 )
 speed = 15.0
-height = 0.1
 
 [node name="AntiGravChair2" parent="OfficeArea" instance=ExtResource( 9 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20.7094, 0.941097, -1.05915 )
 speed = 15.0
-height = 0.1
 offset = 20.0
 
 [node name="Table3" parent="OfficeArea" instance=ExtResource( 1 )]
@@ -150,12 +148,10 @@ transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -16.6774,
 [node name="AntiGravChair" parent="OfficeArea2" instance=ExtResource( 9 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16.7211, 0.941097, -1.05916 )
 speed = 15.0
-height = 0.1
 
 [node name="AntiGravChair2" parent="OfficeArea2" instance=ExtResource( 9 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20.7094, 0.941097, -1.05915 )
 speed = 15.0
-height = 0.1
 offset = 20.0
 
 [node name="Table3" parent="OfficeArea2" instance=ExtResource( 1 )]
