@@ -12,7 +12,11 @@ var camera_x_rotation = 0
 var items_in_range = []
 var inventory = []
 
+var frozen = false
+
 func _input(event):
+	if frozen:
+		return
 	if event is InputEventMouseMotion and MouseCapture.mouse_captured:
 		#sideways rotation
 		$Head.rotate_y(deg2rad(-event.relative.x * mouse_sens))
@@ -25,6 +29,8 @@ func _input(event):
 
 
 func _physics_process(delta):
+	if frozen:
+		return
 	if Input.is_action_just_pressed("activate") and !items_in_range.empty():
 		items_in_range[0].player_activate(self)
 	
@@ -57,6 +63,10 @@ func _physics_process(delta):
 		velocity.y += jump_power
 	
 	velocity = move_and_slide(velocity, Vector3.UP)
+
+func freeze():
+	frozen = true
+	$FinaleDarkening.counting = true
 
 func add_item(item):
 	if inventory.has(item):

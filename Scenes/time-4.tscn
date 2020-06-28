@@ -1,9 +1,12 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scripts/info_object.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/alienConsole.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/alientThing2.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/alientThing.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/alien.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scripts/final_trigger.gd" type="Script" id=6]
+[ext_resource path="res://Scenes/alien_controller.gd" type="Script" id=7]
 
 [sub_resource type="BoxShape" id=2]
 extents = Vector3( 5.09685, 7.61464, 1 )
@@ -18,6 +21,9 @@ emission = Color( 0, 1, 0.180392, 1 )
 emission_energy = 1.0
 emission_operator = 0
 emission_on_uv2 = false
+
+[sub_resource type="BoxShape" id=5]
+extents = Vector3( 1, 2.61331, 7.29254 )
 
 [node name="time-4" type="Spatial"]
 
@@ -96,3 +102,17 @@ shape = SubResource( 2 )
 transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 1, -0.606121, 2.31142, 0.82428 )
 mesh = SubResource( 3 )
 material/0 = SubResource( 4 )
+
+[node name="alien" type="Spatial" parent="." instance=ExtResource( 5 )]
+transform = Transform( -0.0493205, 0, 0.998783, 0, 1, 0, -0.998783, 0, -0.0493205, 9.86885, 1.01042, 0 )
+script = ExtResource( 7 )
+move_location = Vector3( -10, 0, 0 )
+
+[node name="Area" type="Area" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.29488, 0, 0 )
+script = ExtResource( 6 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Area"]
+shape = SubResource( 5 )
+[connection signal="body_entered" from="Area" to="Area" method="_on_Area_body_entered"]
+[connection signal="start_finale" from="Area" to="alien" method="_on_Area_start_finale"]
