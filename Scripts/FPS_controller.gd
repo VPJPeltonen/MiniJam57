@@ -68,7 +68,7 @@ func _physics_process(delta):
 func freeze(position):
 	frozen = true
 	$FinaleDarkening.counting = true
-	#look_at(position,Vector3.UP)
+	look_at_from_position(translation,Vector3(0,0,-100),Vector3.UP)
 	$AudioStreamPlayer.alien_music()
 
 func add_item(item):
