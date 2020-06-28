@@ -67,6 +67,7 @@ func _physics_process(delta):
 func freeze():
 	frozen = true
 	$FinaleDarkening.counting = true
+	$AudioStreamPlayer.alien_music()
 
 func add_item(item):
 	if inventory.has(item):

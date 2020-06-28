@@ -1,6 +1,5 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://Scripts/info_object.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/alienConsole.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/alientThing2.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/alientThing.tscn" type="PackedScene" id=4]
@@ -8,12 +7,12 @@
 [ext_resource path="res://Scripts/final_trigger.gd" type="Script" id=6]
 [ext_resource path="res://Scenes/alien_controller.gd" type="Script" id=7]
 
-[sub_resource type="BoxShape" id=2]
+[sub_resource type="BoxShape" id=1]
 extents = Vector3( 5.09685, 7.61464, 1 )
 
-[sub_resource type="QuadMesh" id=3]
+[sub_resource type="QuadMesh" id=2]
 
-[sub_resource type="SpatialMaterial" id=4]
+[sub_resource type="SpatialMaterial" id=3]
 params_diffuse_mode = 4
 albedo_color = Color( 0.14902, 1, 0, 1 )
 emission_enabled = true
@@ -22,88 +21,62 @@ emission_energy = 1.0
 emission_operator = 0
 emission_on_uv2 = false
 
-[sub_resource type="BoxShape" id=5]
+[sub_resource type="BoxShape" id=4]
 extents = Vector3( 1, 2.61331, 7.29254 )
 
 [node name="time-4" type="Spatial"]
 
-[node name="alientThing5" type="StaticBody" parent="." instance=ExtResource( 3 )]
+[node name="alientThing5" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.51134, 3.88813, 0 )
-script = ExtResource( 1 )
-info = "Unknown materials. Unknown purpose. Defies gravity"
 
-[node name="alientThing6" type="StaticBody" parent="." instance=ExtResource( 3 )]
+[node name="alientThing6" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16.2237, 5.35317, -4.14749 )
-script = ExtResource( 1 )
-info = "Unknown materials. Unknown purpose. Defies gravity"
 
-[node name="alientThing7" type="StaticBody" parent="." instance=ExtResource( 3 )]
+[node name="alientThing7" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21.1736, 3.36543, -4.14749 )
-script = ExtResource( 1 )
-info = "Unknown materials. Unknown purpose. Defies gravity"
 
-[node name="alientThing" type="StaticBody" parent="." instance=ExtResource( 4 )]
+[node name="alientThing" parent="." instance=ExtResource( 4 )]
 transform = Transform( 1.19249e-08, 1, 0, -1, 1.19249e-08, 0, 0, 0, 1, -35.9988, 3.50411, 0 )
-script = ExtResource( 1 )
-info = "Unknown material. Unknown purpose. Radiates energy"
 
-[node name="alientThing2" type="StaticBody" parent="." instance=ExtResource( 4 )]
+[node name="alientThing2" parent="." instance=ExtResource( 4 )]
 transform = Transform( 1.19249e-08, 1, 0, -1, 1.19249e-08, 0, 0, 0, 1, -35.9988, 3.50411, 5.4906 )
-script = ExtResource( 1 )
-info = "Unknown material. Unknown purpose. Radiates energy"
 
-[node name="alientThing10" type="StaticBody" parent="." instance=ExtResource( 4 )]
+[node name="alientThing10" parent="." instance=ExtResource( 4 )]
 transform = Transform( 1.19249e-08, 1, 0, -1, 1.19249e-08, 0, 0, 0, 1, -24.9048, 3.50411, -18.0639 )
-script = ExtResource( 1 )
-info = "Unknown material. Unknown purpose. Radiates energy"
 
-[node name="alientThing11" type="StaticBody" parent="." instance=ExtResource( 4 )]
+[node name="alientThing11" parent="." instance=ExtResource( 4 )]
 transform = Transform( 1.62921e-07, -1, -3.25841e-07, -1, -1.62921e-07, 0, -5.30863e-14, 3.25841e-07, -1, -10.5867, 3.50411, -17.696 )
-script = ExtResource( 1 )
-info = "Unknown material. Unknown purpose. Radiates energy"
 
-[node name="alientThing12" type="StaticBody" parent="." instance=ExtResource( 4 )]
+[node name="alientThing12" parent="." instance=ExtResource( 4 )]
 transform = Transform( -1.94281e-15, 1.19249e-08, -1, -1, -1.62921e-07, 0, -1.62921e-07, 1, 1.19249e-08, -18.2143, 3.50411, -27.565 )
-script = ExtResource( 1 )
-info = "Unknown material. Unknown purpose. Radiates energy"
 
-[node name="alientThing3" type="StaticBody" parent="." instance=ExtResource( 4 )]
+[node name="alientThing3" parent="." instance=ExtResource( 4 )]
 transform = Transform( 1.19249e-08, 1, 0, -1, 1.19249e-08, 0, 0, 0, 1, -35.9988, 3.50411, -7.09207 )
-script = ExtResource( 1 )
-info = "Unknown material. Unknown purpose. Radiates energy"
 
-[node name="alientThing4" type="StaticBody" parent="." instance=ExtResource( 4 )]
+[node name="alientThing4" parent="." instance=ExtResource( 4 )]
 transform = Transform( -1, 3.25841e-07, 0, -3.25841e-07, -1, 0, 0, 0, 1, -28.0395, 11.2528, -0.0351849 )
-script = ExtResource( 1 )
-info = "Unknown material. Unknown purpose. Radiates energy"
 
-[node name="alientThing8" type="StaticBody" parent="." instance=ExtResource( 4 )]
+[node name="alientThing8" parent="." instance=ExtResource( 4 )]
 transform = Transform( -1, 3.25841e-07, 0, -3.25841e-07, -1, 0, 0, 0, 1, -19.9357, 11.2528, -0.0351849 )
-script = ExtResource( 1 )
-info = "Unknown material. Unknown purpose. Radiates energy"
 
-[node name="alientThing9" type="StaticBody" parent="." instance=ExtResource( 4 )]
+[node name="alientThing9" parent="." instance=ExtResource( 4 )]
 transform = Transform( -1, 3.25841e-07, 0, -3.25841e-07, -1, 0, 0, 0, 1, -11.2979, 11.2528, -0.0351849 )
-script = ExtResource( 1 )
-info = "Unknown material. Unknown purpose. Radiates energy"
 
-[node name="alienConsole" type="StaticBody" parent="." instance=ExtResource( 2 )]
+[node name="alienConsole" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -30.9404, 0.114233, 0 )
-script = ExtResource( 1 )
-info = "Somekind of control device. Materials unknown"
 
 [node name="MeshInstance" type="StaticBody" parent="."]
 transform = Transform( -0.0486058, 0, -0.998818, 0, 1, 0, 0.998818, 0, -0.0486058, 6.92661, 0, 0.882156 )
 
 [node name="CollisionShape" type="CollisionShape" parent="MeshInstance"]
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="MeshInstance"]
 transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 1, -0.606121, 2.31142, 0.82428 )
-mesh = SubResource( 3 )
-material/0 = SubResource( 4 )
+mesh = SubResource( 2 )
+material/0 = SubResource( 3 )
 
-[node name="alien" type="Spatial" parent="." instance=ExtResource( 5 )]
+[node name="alien" parent="." instance=ExtResource( 5 )]
 transform = Transform( -0.0493205, 0, 0.998783, 0, 1, 0, -0.998783, 0, -0.0493205, 9.86885, 1.01042, 0 )
 script = ExtResource( 7 )
 move_location = Vector3( -10, 0, 0 )
@@ -113,6 +86,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.29488, 0, 0 )
 script = ExtResource( 6 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Area"]
-shape = SubResource( 5 )
+shape = SubResource( 4 )
 [connection signal="body_entered" from="Area" to="Area" method="_on_Area_body_entered"]
 [connection signal="start_finale" from="Area" to="alien" method="_on_Area_start_finale"]
