@@ -31,13 +31,11 @@ func _ready():
 		enable_time(i, false)
 		i += 1
 	enable_time(0, true)
-	enable_time(1, true)
 	ui.hide()
 	
 	# Get time scenes
 
 	switch_time(0)
-
 
 func show_activetable():
 	outline_mesh.show()
@@ -45,15 +43,20 @@ func show_activetable():
 func hide_activetable():
 	outline_mesh.hide()
 
-func enable_time(i: int, enable: bool):
+func enable_time(i: int, enable: bool = true):
 	time_buttons[i].disabled = !enable
 
-func player_activate(player):
+func player_activate(player: FPS_Controller):
+	if player.inventory.count("old input device"):
+		enable_time(1)
+	if player.inventory.count("mysterious object"):
+		enable_time(2)
+	if player.inventory.count("ancient object"):
+		enable_time(3)
 	MouseCapture.free_mouse(false)
 	ui.show()
 
 func travel_time(time: int):
-	print("Traveling to %d" % time)
 	switch_time(time)
 	ui.hide()
 	MouseCapture.capture_mouse()
@@ -68,3 +71,7 @@ func switch_time(time: int):
 	
 	var new_scene = packed_time_scenes[time].instance()
 	times_node.add_child(new_scene)
+
+func _on_Exit_pressed():
+	ui.hide()
+	MouseCapture.capture_mouse()

@@ -1,7 +1,7 @@
 extends "res://Scripts/info_object.gd"
 class_name Cabinet
 
-var opened: bool = false
+var open: bool = false
 var anim_player: AnimationPlayer
 
 func _ready():
@@ -9,8 +9,8 @@ func _ready():
 	anim_player.play("Closed")
 
 func player_activate(player):
-	opened = !opened
-	if opened:
-		anim_player.play("Open")
+	if open:
+		anim_player.play_backwards("Open") # close
 	else:
-		anim_player.play_backwards("Open")
+		anim_player.play("Open") # open
+	open = !open

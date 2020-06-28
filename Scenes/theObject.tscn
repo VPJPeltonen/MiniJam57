@@ -3,12 +3,12 @@
 [ext_resource path="res://Scripts/pickable_object.gd" type="Script" id=1]
 [ext_resource path="res://Assets/outline_ material.tres" type="Material" id=2]
 
-[sub_resource type="BoxShape" id=6]
+[sub_resource type="BoxShape" id=1]
 extents = Vector3( 1, 1.91551, 1 )
 
-[sub_resource type="PrismMesh" id=7]
+[sub_resource type="PrismMesh" id=2]
 
-[sub_resource type="SpatialMaterial" id=8]
+[sub_resource type="SpatialMaterial" id=3]
 albedo_color = Color( 0.745098, 0.992157, 0.141176, 1 )
 emission_enabled = true
 emission = Color( 0.87451, 1, 0, 1 )
@@ -16,7 +16,7 @@ emission_energy = 1.0
 emission_operator = 0
 emission_on_uv2 = false
 
-[sub_resource type="ArrayMesh" id=9]
+[sub_resource type="ArrayMesh" id=4]
 surfaces/0 = {
 "aabb": AABB( -1.02673, -1.02988, -1.03077, 2.05345, 2.06567, 2.06156 ),
 "array_data": PoolByteArray( 85, 73, 135, 188, 123, 148, 132, 63, 94, 240, 131, 63, 0, 0, 127, 0, 127, 0, 0, 127, 85, 49, 0, 0, 84, 73, 135, 188, 124, 148, 132, 63, 94, 240, 131, 191, 0, 0, 129, 0, 129, 0, 0, 127, 170, 58, 0, 0, 85, 73, 135, 188, 123, 148, 132, 63, 94, 240, 131, 63, 0, 0, 127, 0, 127, 0, 0, 127, 85, 49, 0, 0, 84, 73, 135, 188, 124, 148, 132, 63, 94, 240, 131, 191, 0, 0, 129, 0, 129, 0, 0, 127, 170, 58, 0, 0, 195, 107, 131, 191, 34, 211, 131, 191, 34, 211, 131, 63, 0, 0, 127, 0, 127, 0, 0, 127, 0, 0, 0, 56, 195, 107, 131, 63, 34, 211, 131, 191, 34, 211, 131, 191, 0, 0, 129, 0, 129, 0, 0, 127, 85, 57, 0, 56, 195, 107, 131, 63, 34, 211, 131, 191, 34, 211, 131, 63, 0, 0, 127, 0, 127, 0, 0, 127, 85, 53, 0, 56, 195, 107, 131, 191, 34, 211, 131, 191, 34, 211, 131, 191, 0, 0, 129, 0, 129, 0, 0, 127, 0, 60, 0, 56, 85, 73, 135, 188, 123, 148, 132, 63, 94, 240, 131, 63, 113, 56, 0, 0, 0, 0, 129, 127, 85, 53, 0, 0, 84, 73, 135, 188, 124, 148, 132, 63, 94, 240, 131, 191, 143, 56, 0, 0, 0, 0, 127, 127, 0, 0, 0, 56, 84, 73, 135, 188, 124, 148, 132, 63, 94, 240, 131, 191, 113, 56, 0, 0, 0, 0, 129, 127, 85, 57, 0, 0, 85, 73, 135, 188, 123, 148, 132, 63, 94, 240, 131, 63, 143, 56, 0, 0, 0, 0, 127, 127, 85, 53, 0, 56, 195, 107, 131, 63, 34, 211, 131, 191, 34, 211, 131, 63, 113, 56, 0, 0, 0, 0, 129, 127, 85, 53, 0, 56, 195, 107, 131, 191, 34, 211, 131, 191, 34, 211, 131, 191, 143, 56, 0, 0, 0, 0, 127, 127, 0, 0, 0, 60, 195, 107, 131, 63, 34, 211, 131, 191, 34, 211, 131, 191, 113, 56, 0, 0, 0, 0, 129, 127, 85, 57, 0, 56, 195, 107, 131, 191, 34, 211, 131, 191, 34, 211, 131, 63, 143, 56, 0, 0, 0, 0, 127, 127, 85, 53, 0, 60, 195, 107, 131, 191, 34, 211, 131, 191, 34, 211, 131, 63, 0, 129, 0, 0, 127, 0, 0, 127, 85, 57, 0, 56, 195, 107, 131, 63, 34, 211, 131, 191, 34, 211, 131, 63, 0, 129, 0, 0, 127, 0, 0, 127, 0, 60, 0, 56, 195, 107, 131, 191, 34, 211, 131, 191, 34, 211, 131, 191, 0, 129, 0, 0, 127, 0, 0, 127, 85, 57, 0, 60, 195, 107, 131, 63, 34, 211, 131, 191, 34, 211, 131, 191, 0, 129, 0, 0, 127, 0, 0, 127, 0, 60, 0, 60 ),
@@ -32,19 +32,19 @@ surfaces/0 = {
 [node name="theObject" type="StaticBody"]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -33.8622, 1.25371, 7.19037 )
 script = ExtResource( 1 )
-info = "Strange thing. You should pick it up"
-item_held = "object"
+info = "Strange thing. You should pick it up. It will help me travel further back in time."
+item_held = "ancient object"
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
-shape = SubResource( 6 )
+shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.918221, 0 )
-mesh = SubResource( 7 )
-material/0 = SubResource( 8 )
+mesh = SubResource( 2 )
+material/0 = SubResource( 3 )
 
 [node name="Outline" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.918221, 0 )
 visible = false
-mesh = SubResource( 9 )
+mesh = SubResource( 4 )
 material/0 = ExtResource( 2 )

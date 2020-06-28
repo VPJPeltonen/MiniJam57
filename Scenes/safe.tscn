@@ -93,6 +93,8 @@ material/0 = null
 
 [node name="theObject" parent="." instance=ExtResource( 7 )]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.449558, -1.34453, -0.032317 )
+info = "Strange thing. You should pick it up. It should help me jump farther back."
+item_held = "mysterious object"
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.151714, 0, 0 )

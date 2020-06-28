@@ -13,9 +13,15 @@ _global_script_classes=[ {
 "class": "Cabinet",
 "language": "GDScript",
 "path": "res://Assets/Meshes/time0/Cabinet.gd"
+}, {
+"base": "KinematicBody",
+"class": "FPS_Controller",
+"language": "GDScript",
+"path": "res://Scripts/FPS_controller.gd"
 } ]
 _global_script_class_icons={
-"Cabinet": ""
+"Cabinet": "",
+"FPS_Controller": ""
 }
 
 [application]

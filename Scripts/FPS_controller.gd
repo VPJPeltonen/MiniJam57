@@ -1,4 +1,5 @@
 extends KinematicBody
+class_name FPS_Controller
 
 export var speed = 10
 export var acceleration = 5
@@ -9,8 +10,8 @@ export var mouse_sens = 0.3
 var velocity = Vector3()
 var camera_x_rotation = 0
 
-var items_in_range = []
-var inventory = []
+var items_in_range: Array = []
+var inventory: Array = []
 
 var frozen = false
 
