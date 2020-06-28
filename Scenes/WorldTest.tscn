@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Assets/Meshes/room.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/time-0.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/time-1.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/time-3.tscn" type="PackedScene" id=5]
 
 [node name="World" type="Spatial"]
 
@@ -16,6 +17,9 @@
 [node name="time-0" parent="room/times" instance=ExtResource( 3 )]
 
 [node name="time-1" parent="room/times" instance=ExtResource( 4 )]
+visible = false
+
+[node name="time-3" parent="room/times" instance=ExtResource( 5 )]
 visible = false
 
 [node name="Player" parent="." instance=ExtResource( 2 )]

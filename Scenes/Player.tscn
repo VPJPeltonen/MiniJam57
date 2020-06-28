@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scripts/FPS_controller.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/Analyzer.gd" type="Script" id=2]
 [ext_resource path="res://Scripts/InventoryUI.gd" type="Script" id=3]
+[ext_resource path="res://Assets/UI_font.tres" type="DynamicFont" id=4]
 
 [sub_resource type="CapsuleShape" id=1]
 
@@ -52,7 +53,7 @@ margin_left = 3.5849
 margin_top = 3.94334
 margin_right = 277.585
 margin_bottom = 130.943
-color = Color( 0.305882, 0.427451, 0.843137, 0.588235 )
+color = Color( 0.156863, 0.215686, 0.427451, 0.588235 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -61,6 +62,7 @@ __meta__ = {
 margin_top = 1.0
 margin_right = 273.0
 margin_bottom = 128.0
+custom_fonts/font = ExtResource( 4 )
 text = "Random Info Here"
 autowrap = true
 __meta__ = {
@@ -89,7 +91,7 @@ margin_left = 4.0
 margin_top = 4.0
 margin_right = 89.0
 margin_bottom = 155.0
-color = Color( 0.305882, 0.427451, 0.843137, 0.588235 )
+color = Color( 0.156863, 0.215686, 0.427451, 0.588235 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -98,6 +100,7 @@ __meta__ = {
 margin_top = 1.0
 margin_right = 85.0
 margin_bottom = 150.0
+custom_fonts/font = ExtResource( 4 )
 text = "Inventory:"
 autowrap = true
 __meta__ = {
