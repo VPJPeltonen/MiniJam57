@@ -1,10 +1,13 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scripts/FPS_controller.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/Analyzer.gd" type="Script" id=2]
 [ext_resource path="res://Scripts/InventoryUI.gd" type="Script" id=3]
 [ext_resource path="res://Assets/UI_font.tres" type="DynamicFont" id=4]
 [ext_resource path="res://Scripts/FinaleDarkening.gd" type="Script" id=5]
+[ext_resource path="res://Scripts/Music_controller.gd" type="Script" id=6]
+[ext_resource path="res://Assets/Audio/supernatural.ogg" type="AudioStream" id=7]
+[ext_resource path="res://Assets/Audio/floatging.ogg" type="AudioStream" id=8]
 
 [sub_resource type="CapsuleShape" id=1]
 
@@ -121,5 +124,17 @@ color = Color( 0, 0, 0, 0 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+volume_db = 1.0
+autoplay = true
+script = ExtResource( 6 )
+finale_music = ExtResource( 8 )
+alien_music = ExtResource( 7 )
+time_zero = ExtResource( 8 )
+time_one = ExtResource( 8 )
+time_two = ExtResource( 8 )
+time_three = ExtResource( 8 )
 [connection signal="body_entered" from="Head/Interract_Area" to="." method="_on_Interract_Area_body_entered"]
 [connection signal="body_exited" from="Head/Interract_Area" to="." method="_on_Interract_Area_body_exited"]
